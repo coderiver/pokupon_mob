@@ -100,10 +100,10 @@
 	background-size: cover
 	background-position: 50% 50%
 	
-=background-size($width: 100%, $height: 100%)
-	-moz-background-size: $width $height
-	-webkit-background-size: $width $height
-	background-size: $width $height 
+// =background-size($width: 100%, $height: 100%)
+// 	-moz-background-size: $width $height
+// 	-webkit-background-size: $width $height
+// 	background-size: $width $height 
 // retina bg
 =retina
 	@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2)
@@ -123,8 +123,8 @@
 =font($alias, $name)
 	@font-face
 		font-family: $alias
-		src: url("fonts/" + $name + ".eot")
-		src: url("fonts/" + $name + ".eot?#iefix") format("embedded-opentype"), url("fonts/" + $name + ".woff") format("woff"), url("fonts/" + $name + ".ttf") format("truetype")
+		src: url("../fonts/" + $name + ".eot")
+		src: url("../fonts/" + $name + ".eot?#iefix") format("embedded-opentype"), url("../fonts/" + $name + ".woff") format("woff"), url("../fonts/" + $name + ".ttf") format("truetype")
 		font-weight: normal
 		font-style: normal
 
