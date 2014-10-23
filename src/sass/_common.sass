@@ -142,7 +142,7 @@ a
 		height: 60px
 		overflow: visible
 		background: none 
-		+tr(background .4s)
+		//+tr(background .4s)
 		&:before,
 		&:after
 			content: "" 
@@ -365,11 +365,11 @@ a
 	z-index: 2 
 	background: $light
 	box-shadow: 0 0 3px rgba(0, 0, 0, 0.3)
-	+transform(translateY(-500px))
+	+transform(translateX(100%))
 	+tr(transform .3s)
 	will-change: transform
 	&.is-active
-		+transform(translateY(0))
+		+transform(translateX(0))
 	&__title
 		margin-bottom: 7px
 		font-size: 18px
