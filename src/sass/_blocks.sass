@@ -1,0 +1,41 @@
+.balance-link
+	display: block
+	padding: 0 20px 
+	height: 60px
+	line-height: 60px
+	background: rgba(#fff, .5)
+	border-radius: 10px
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5)
+	color: $dark
+	font-size: 16px
+	text-transform: uppercase
+	+transition(box-shadow .4s,background .4s)
+	+bold
+	&:hover
+		background: rgba(#fff, .7)
+	&:active
+		box-shadow: none
+	span
+		color: $green
+
+.btn-feedback
+	display: block
+	padding: 11px 10px 
+	border-radius: 5px
+	background: #3c474f
+	text-align: center
+	line-height: 1.25
+	box-shadow: 0 1px 1px rgba(0,0,0,.5)
+	background: #434e57 
+	+g(#434e57, #374047)
+	color: $gray
+	font-size: 16px
+	+cbold
+	text-transform: uppercase
+	span
+		display: block  
+	&:hover
+		background: #374047 
+		+g(#374047,#434e57)
+	&:active
+		box-shadow: 0 1px 1px rgba(0,0,0,.2)
