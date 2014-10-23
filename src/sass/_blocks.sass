@@ -38,4 +38,92 @@
 		background: #374047 
 		+g(#374047,#434e57)
 	&:active
-		box-shadow: 0 1px 1px rgba(0,0,0,.2)
+		box-shadow: none
+.icon-metro
+	display: inline-block
+	vertical-align: middle
+	+s(metro)
+.icon-cart
+	vertical-align: middle
+	+svg(cart,13,11)
+.icon-time
+	vertical-align: middle
+	display: inline-block
+	+s(time)
+.icon-hot
+	position: absolute
+	width: 17px
+	height: 17px
+	border-radius: 50%
+	box-shadow: 0 1px 0 rgba(0,0,0,.1), inset 0 1px 0 #fff
+	background: #ffdc2b 
+	+g(#ffdc2b, #ff9e0f) 
+	&:before
+		content: ""
+		position: absolute
+		left: 2px
+		top: 2px
+		+svg(favorite,12,12) 
+.address 
+	display: block
+	padding: 6px 10px 6px 14px 
+	border-radius: 5px
+	background: rgba(#000, .4)
+	font-size: 14px
+	color: #fff
+	+reg 
+	.icon-metro
+		margin-right: 6px
+.counter 
+	display: inline-block
+	vertical-align: middle
+	padding: 0 5px 
+	border-radius: 3px
+	background: #fff
+	font-size: 16px
+	+bold
+	white-space: nowrap
+	color: $dark 
+	box-shadow: 0 1px 1px rgba(0,0,0,.5), inset 0 10px 0 rgba(0,0,0,.1)
+	&__main
+		display: inline-block
+		vertical-align: middle
+		
+.btn
+	border: 1px solid #ffdf07
+	padding: 7px 15px 
+	border-radius: 11px
+	background: #ffe80c
+	font-size: 16px
+	+cbold
+	color: $dark
+	text-shadow: 0 1px 0 #fff
+	text-transform: uppercase 
+	background: #fff111 
+	+g(#fff111, #ffdf07)
+	box-shadow: 0 1px 3px rgba(0,0,0,.33), inset 0 0 0 1px rgba(252,252,252,.15)
+	&:hover
+		background: #ffdf07 
+		+g(#ffdf07, #fff111)
+	&:active
+		background: #ffdf07 
+		box-shadow: none 
+
+.btn-more
+	display: block
+	width: 100%
+	border: 1px solid #dbdddd
+	padding: 14px 10px
+	color: $gray_d
+	+cbold 
+	font-size: 16px
+	text-transform: uppercase
+	text-align: center  
+	border-radius: 5px
+	background: #edf1f1
+	+tr(background .4s)
+	box-shadow: 0 1px 0 rgba(0,0,0,.2), inset 0 1px 0 #fff
+	&:hover
+		background: #ddd 
+	&:active
+		box-shadow: none
