@@ -15,4 +15,5 @@ head.ready(function() {
 	$(".js-nav-main").on("click", function(event){
 		event.stopPropagation();
 	});
+
 });

@@ -18,10 +18,10 @@
 			height: 5px
 			opacity: .2
 			+background-image(linear-gradient(bottom, rgba(0,0,0,0) 0%, #000 100%)) 
+	&_mod
+		padding: 0 10px
 .item
-	display: block
 	margin: 20px 0 
-	width: 460px
 	border-radius: 10px
 	background: #fff
 	+shadow
@@ -65,10 +65,16 @@
 		position: absolute
 		right: 10px
 		bottom: 19px
-	&__footer
-		display: table
-		width: 100%
+	.price-box
 		table-layout: fixed
+		&__info
+			&:first-child
+				width: 36%
+			&:last-child
+				width: 36%
+.price-box
+	display: table
+	width: 100%
 	&__info
 		display: table-cell
 		text-align: center
@@ -76,7 +82,13 @@
 		padding: 12px 10px 
 		color: #666
 		font-size: 12px
-		border-left: 1px solid #dbdee0
+		border-left: 1px solid $border
+		&:first-child
+			border: 0
+		&.is-main-price
+			strong
+				font-size: 38px
+				color: $blue_d 
 		strong
 			font-weight: normal
 			+bold
@@ -84,27 +96,70 @@
 			color: $dark 
 		span
 			display: block
-		&:first-child
-			border: 0
-			width: 36%
-		&:last-child
-			width: 36%
-		
+.page-nav
+	&__prev
+		display: inline-block
+		padding: 15px 0 
+		color: $gray_d 
+		+bold
+		font-size: 16px
+		+ts
+	i
+		+svg(arr-prev,24,13)
 
+.promo
+	margin-bottom: 20px
+	padding: 13px 10px
+	background: #fff 
+	+shadow
+	&__title
+		position: relative
+		font-size: 20px
+		margin: 21px 
+		padding-right: 30px
+		color: $dark
+		+bold
+		line-height: 1.2
+		.dots-more
+			position: absolute
+			right: -14px
+			top: -20px
+	&__img
+		position: relative
+		overflow: hidden
+		img
+			width: 100%
+			height: auto
+			display: block
+		.address
+			position: absolute
+			bottom: 10px
+			left: 10px
+	.price-box
+		&__info
+			padding: 4px 10px 
+	.btn-wrap
+		padding: 10px 0 0
 
+.tab-group
+	margin: 20px 0 
+	background: #fff 
+	+shadow
 
-
-
-
-
-
-
-
-
-
-
-
-
+.article
+	color: $gray_d
+	line-height: 1.33
+	+reg
+	font-size: 15px
+	&__in
+		padding: 5px 30px 25px
+	p
+		margin-bottom: 24px
+	img
+		display: block
+		margin: 24px 0 20px 
+		height: auto
+		max-width: 100%
 
 
 
