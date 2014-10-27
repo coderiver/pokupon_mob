@@ -77,8 +77,9 @@
 .counter 
 	display: inline-block
 	vertical-align: middle
-	padding: 0 5px 
+	padding: 1px 5px 3px
 	border-radius: 3px
+	line-height: 1
 	background: #fff
 	font-size: 16px
 	+bold
@@ -88,6 +89,11 @@
 	&__main
 		display: inline-block
 		vertical-align: middle
+	&.is-finished
+		.counter__main
+			color: $red
+			+cbold
+			text-transform: uppercase
 .btn-wrap
 	border-top: 1px solid $border 
 	padding: 17px 0 26px
