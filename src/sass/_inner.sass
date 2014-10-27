@@ -61,10 +61,7 @@
 			width: 100%
 			display: block
 			height: auto
-	&__counters
-		position: absolute
-		right: 10px
-		bottom: 19px
+	
 	.price-box
 		table-layout: fixed
 		&__info
@@ -72,6 +69,11 @@
 				width: 36%
 			&:last-child
 				width: 36%
+				
+.counters
+	position: absolute
+	right: 10px
+	bottom: 19px
 .price-box
 	display: table
 	width: 100%
@@ -96,6 +98,12 @@
 			color: $dark 
 		span
 			display: block
+	&__single
+		padding: 12px 10px 
+		text-align: center
+		color: $blue_d
+		strong
+			font-size: 28px
 .page-nav
 	&__prev
 		display: inline-block
@@ -145,11 +153,15 @@
 	margin: 20px 0 
 	background: #fff 
 	+shadow
-
+.tab-nav-content
+	margin-bottom: 20px
+	background: #fff 
+	+shadow
 .article
 	color: $gray_d
 	line-height: 1.33
 	+reg
+	background: #fff 
 	font-size: 15px
 	&__in
 		padding: 5px 30px 25px
@@ -160,8 +172,12 @@
 		margin: 24px 0 20px 
 		height: auto
 		max-width: 100%
-
-
+	a
+		color: $blue 
+	strong
+		color: $dark
+		font-weight: normal
+		+bold 
 
 
 

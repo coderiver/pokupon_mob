@@ -79,6 +79,10 @@ $border: #dbdee0
 	text-shadow: 0 1px 0 rgba(#000, .5)
 =shadow
 	box-shadow: 0 0 3px rgba(0,0,0,.2)
+.has-open-nav
+	overflow: hidden
+	body
+		overflow: hidden
 body   
 	min-width: 480px
 	font-size: 14px
@@ -316,11 +320,13 @@ a
 .nav
 	position: fixed
 	top: 0
-	left: 0
+	left: 50%
 	right: 0
 	bottom: 0
 	z-index: 10
 	overflow-y: auto
+	margin-left: -240px
+	//width: 480px
 	+transform(translateX(-100%))
 	+tr(transform .3s)
 	will-change: transform

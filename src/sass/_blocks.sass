@@ -138,6 +138,7 @@
 		box-shadow: inset 0 1px 0 #fff
 
 .dots-more
+	display: inline-block
 	height: 50px
 	width: 50px
 	line-height: 50px
@@ -161,6 +162,9 @@
 	&__list
 		white-space: nowrap
 		font-size: 0
+		overflow-x: auto
+		padding-right: 85px
+		overflow-y: hidden
 		li
 			display: inline-block
 			vertical-align: top
@@ -186,6 +190,51 @@
 		right: 0
 		top: 0
 		z-index: 2
+.tab-nav
+	display: table
+	position: relative
+	z-index: 2
+	width: 100%
+	table-layout: fixed
+	li
+		display: table-cell
+		position: relative
+		vertical-align: top
+		border-left: 1px solid $border 
+		background: rgba(#fff, .5) 
+		border-bottom: 1px solid $border 
+		&:first-child
+			border: 0
+		&.is-active
+			z-index: 2
+			background: #fff 
+			+shadow
+			a
+				color: $dark
+				&:after
+					content: "" 
+					position: absolute
+					bottom: -5px
+					height: 5px
+					left: 0
+					right: 0
+					background: #fff 
+	a
+		display: block
+		position: relative
+		padding: 0 5px 
+		height: 50px
+		line-height: 50px 
+		color: $gray_d
+		+bold
+		text-align: center
+		+tr(color .3s)
+		&:hover
+			color: $blue 
+	span
+		display: inline-block
+		vertical-align: middle
+		line-height: 1.2
 .title
 	margin: 23px 0 13px 
 	color: $gray_d
@@ -193,3 +242,13 @@
 	font-size: 18px
 	text-align: center
 	text-transform: uppercase
+	
+.link-more
+	font-size: 11px
+	+reg
+	text-transform: uppercase
+	text-align: right
+	span,
+	.dots-more
+		vertical-align: middle
+		
