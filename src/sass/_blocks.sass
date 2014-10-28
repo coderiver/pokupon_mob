@@ -9,7 +9,6 @@
 	color: $dark
 	font-size: 16px
 	text-transform: uppercase
-	+transition(box-shadow .4s,background .4s)
 	+bold
 	&:hover
 		background: rgba(#fff, .7)
@@ -136,7 +135,6 @@
 	text-align: center  
 	border-radius: 5px
 	background: #edf1f1
-	+tr(background .4s)
 	box-shadow: 0 1px 0 rgba(0,0,0,.2), inset 0 1px 0 #fff
 	&:hover
 		background: #e8e9e9
@@ -188,7 +186,6 @@
 			border-bottom: 4px solid transparent
 			padding: 13px 0 
 			color: $gray_d
-			+tr(color .3s)
 			&:hover
 				color: $blue 
 	.dots-more
@@ -234,7 +231,6 @@
 		color: $gray_d
 		+bold
 		text-align: center
-		+tr(color .3s)
 		&:hover
 			color: $blue 
 	span
@@ -279,7 +275,6 @@
 		color: #000 
 		border-radius: 4px 
 		background: #fff
-		+tr(background .4s)
 		border: 2px solid #3195ec
 		&:focus
 			background: #fff 
@@ -314,7 +309,10 @@
 	&.is-active
 		.panel__title
 			color: $dark 
+			&:after
+				+svg(arr-t,15,9)
 	&__title
+		position: relative
 		border-top: 1px solid $border 
 		border-bottom: 1px solid $border 
 		padding: 15px 45px 15px 30px
@@ -322,6 +320,13 @@
 		+bold
 		color: $gray_d  
 		cursor: pointer
+		&:after
+			content: ""
+			position: absolute
+			top: 50%
+			margin-top: -4px
+			right: 23px
+			+svg(arr-b,15,9)
 	&__body
 		display: none
 		padding: 30px
@@ -330,3 +335,7 @@
 		color: $dark
 		border-bottom: 1px solid $border 
 		will-change: height
+	&_mod
+		.panel__title
+			text-transform: uppercase
+			+cbold

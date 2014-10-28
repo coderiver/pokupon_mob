@@ -139,7 +139,6 @@
 		+bold
 		font-size: 16px
 		+ts
-		+tr(color .3s)
 		&:hover
 			color: $blue
 		 
@@ -209,6 +208,49 @@
 		color: $dark
 		font-weight: normal
 		+bold 
+	ul
+		margin: 24px 0
+		line-height: 1.2
+		li
+			position: relative
+			margin-bottom: 5px
+			padding-left: 40px
+			&:before
+				content: "" 
+				position: absolute
+				left: 20px
+				top: 6px
+				width: 5px
+				height: 5px
+				background: $blue 
+	ol
+		margin: 24px 0
+		counter-reset: list1
+		li
+			position: relative
+			margin-bottom: 5px
+			&:before
+				content: ""
+				display: inline-block
+				margin-right: 3px
+				counter-increment: list1 
+				content: counter(list1) "."
+				color: $dark
+				font-size: 24px
+				line-height: 1
+				+bold
+			ol
+				margin: 10px
+				counter-reset: list2
+			li
+				padding-left: 30px
+				&:before
+					content: "" 
+					position: absolute
+					left: 0
+					top: 0
+					counter-increment: list2
+					content: counter(list1) "." counter(list2) ". "
 .main
 	padding: 0 10px
 	.item
@@ -267,7 +309,6 @@
 		padding: 20px 
 		a
 			color: $dark 
-			+tr(color .4s)
 			&:hover
 				color: $blue 
 	&__body
