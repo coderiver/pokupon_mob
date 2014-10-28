@@ -250,6 +250,12 @@
 	text-transform: uppercase
 	&.is-success
 		color: $green_l
+	&.has-border
+		margin-top: 0
+		padding: 23px 0 10px
+		border-top: 1px solid $border 
+	&_dark
+		color: #000 
 .link-more 
 	font-size: 11px
 	+reg
@@ -300,3 +306,27 @@
 		&:before
 			+svg(minus,19,19)
 		
+.panel
+	margin-bottom: 5px
+	background: #fff 
+	+ .footer
+		margin-top: 20px
+	&.is-active
+		.panel__title
+			color: $dark 
+	&__title
+		border-top: 1px solid $border 
+		border-bottom: 1px solid $border 
+		padding: 15px 45px 15px 30px
+		font-size: 18px
+		+bold
+		color: $gray_d  
+		cursor: pointer
+	&__body
+		display: none
+		padding: 30px
+		line-height: 1.7
+		font-size: 14px
+		color: $dark
+		border-bottom: 1px solid $border 
+		will-change: height

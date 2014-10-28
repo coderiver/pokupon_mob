@@ -131,6 +131,7 @@
 		strong
 			font-size: 28px
 .page-nav
+	
 	&__prev
 		display: inline-block
 		padding: 15px 0 
@@ -138,6 +139,10 @@
 		+bold
 		font-size: 16px
 		+ts
+		+tr(color .3s)
+		&:hover
+			color: $blue
+		 
 	i
 		+svg(arr-prev,24,13)
 

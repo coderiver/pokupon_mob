@@ -15,7 +15,9 @@ head.ready(function() {
 		event.stopPropagation();
 		return false;
 	});
-	
+	$(".js-toggle-el").on("click", function(event){
+		event.stopPropagation();
+	});
 	$(".js-toggle-nav").on("click", function(event){
 		$("html").toggleClass("has-open-nav");
 		$(this).toggleClass("is-active");
@@ -66,4 +68,17 @@ head.ready(function() {
         });
     }
     number();
+
+    $(".js-accordion-title").on("click", function(){
+    	if ($(this).parents(".js-accordion").hasClass("is-active")) {
+    		$(this).parents(".js-accordion").removeClass("is-active").find(".js-accordion-body").hide();
+    	}
+    	else {
+    		$(".js-accordion").removeClass("is-active");
+    		$(".js-accordion-body").hide();
+    		$(this).parents(".js-accordion").toggleClass("is-active").find(".js-accordion-body").toggle()
+    	}
+    	
+    	return false;
+    });
 });
