@@ -383,11 +383,28 @@
 	+g(rgba(#000,.2), rgba(#000,0))
 
 
-
-
-
-
-
+.message
+	position: relative
+	margin: 10px 10px 20px 
+	background: rgba(#fff,.7) 
+	padding: 20px 40px
+	text-align: center
+	font-size: 16px
+	color: $gray_d 
+	p
+		margin-bottom: 20px
+		&:last-child
+			margin-bottom: 0
+	strong
+		font-weight: normal
+		+bold
+		color: $dark
+	.btn-close
+		position: absolute
+		top: 12px
+		right: 12px
+		&:active
+			top: 13px
 
 
 
