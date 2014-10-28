@@ -28,7 +28,14 @@
 	overflow: hidden
 	&__head
 		display: table
+		width: 100%
 		table-layout: fixed
+	&__categ
+		font-size: 18px
+		color: $dark
+		+cbold
+		text-transform: uppercase 
+		text-align: center
 	&__media,
 	&__title
 		display: table-cell
@@ -69,7 +76,23 @@
 				width: 36%
 			&:last-child
 				width: 36%
-				
+			
+.item_box
+	.item__head
+		display: block
+		padding: 16px 20px 
+	.item__title
+		display: block	
+		padding-bottom: 5px
+	.price-box
+		table-layout: fixed
+		&__info
+			&:first-child
+				width: auto
+			&:last-child
+				width: auto
+		.number
+			margin-bottom: 3px
 .counters
 	position: absolute
 	right: 10px
@@ -90,6 +113,9 @@
 		&.is-main-price
 			strong
 				font-size: 38px
+				color: $blue_d 
+		&.is-price
+			strong
 				color: $blue_d 
 		strong
 			font-weight: normal
@@ -178,41 +204,137 @@
 		color: $dark
 		font-weight: normal
 		+bold 
+.main
+	padding: 0 10px
+	.item
+		&:first-child
+			margin-top: 0
+.pay
+	padding: 0 15px 5px 5px 
+	+clr
+	&__link
+		float: left
+		margin: 0 0 10px 10px
+		width: 210px
+		height: 120px
+		background: #fff
+		border-radius: 3px
+		+shadow
+		text-align: center
+		color: $dark
+		font-size: 16px
+		+reg 
+		+tr(box-shadow .3s)
+		&:hover,
+		&:active
+			box-shadow: 0 0 3px rgba(#000, .2), inset 0 0 5px #3195EC
+	&__img
+		display: block
+		height: 84px
+		padding-top: 30px
 
+.contacts
+	padding: 5px 0 14px 
+	font-size: 15px
+	text-align: center
+	li
+		margin-bottom: 12px
+	a
+		color: $dark 
+	strong
+		font-size: 24px
+		font-weight: normal
 
+.coupons-wrap
+	padding: 0 10px
+	.title
+		&.is-success
+			margin: 0
+			padding: 16px 0 20px 
+			border-top: 1px solid $border 
+.coupon
+	margin: 0 0 20px 
+	background: #fff
+	border-radius: 10px  
+	+shadow
+	&__header
+		font-size: 15px
+		padding: 20px 
+		a
+			color: $dark 
+			+tr(color .4s)
+			&:hover
+				color: $blue 
+	&__body
+		border-top: 1px solid $border 
+		border-bottom: 1px solid $border 
+		padding: 20px 
+		background: #fff url(../img/bg-white.png) 0 0 repeat 
+		+clr
+	&__media
+		float: left
+		width: 180px
+		overflow: hidden
+		img
+			max-width: 100%
+	&__info
+		overflow: hidden
+		padding: 0 20px 
+		text-align: center
+	&__footer
+		padding: 15px 20px 
+		+clr
+	&__btn
+		float: right
+	&__meta
+		overflow: hidden
+		text-align: center
+		font-size: 14px
+		+bold
+		color: $dark 
+		span
+			display: block
+			+reg
+			color: $gray_d
+			 
+.code
+	margin-bottom: 5px
+	font-size: 14px
+	color: $gray_d 
+	span
+		font-size: 18px
+		display: block
+		color: $dark
+		+bold
+		text-transform: uppercase 
 
+.action
+	font-size: 0
+	a
+		display: inline-block
+		margin-left: 45px
+		vertical-align: middle
+		&:first-child
+			margin-left: 0
+	&__print
+		+s(print)
+	&__pdf
+		+s(pdf)
+	&__gift
+		+s(gift)
 
+.info-box
+	margin: 32px 20px 42px
+	font-size: 16px
+	color: $dark
+	line-height: 1.56
+	text-align: center
+	a
+		color: $blue 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.shadow-separator
+	height: 5px
+	+g(rgba(#000,.2), rgba(#000,0))
 
 
 
