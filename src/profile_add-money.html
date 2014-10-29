@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+	<title>Profile add money</title>
+	@@include('_head.html')
+</head>
+<body>
+<!-- BEGIN  out-->
+<div class="out">
+	@@include('_header_logined.html')
+	<div class="balance">
+		На счету: <span>234 грн.</span>
+	</div>
+	<div class="page-nav">
+		<a href="#" class="page-nav__prev">
+			<i></i>
+			Перейти к списку акций
+		</a>
+	</div>
+	<div class="main">
+		<div class="item item_box">
+			<header class="item__head">
+				<div class="item__categ">Пополнение счёта</div>
+			</header>
+			<div class="item__body">
+				<div class="add-money">
+					<div class="add-money__title">Введите сумму пополнения счёта.</div>
+					<a href="#">Для начисления бонусов активируйте ваш мобильный телефон в бонусной программе</a>
+					<div class="add-money__subtitle">Пополнить свой счёт на</div>
+					<div class="add-money__input">
+						<input type="text" class="input">
+						<span>грн.</span>
+					</div>
+				</div>
+				<div class="panel panel_single js-accordion">
+					<div class="panel__title js-accordion-title">
+						<a href="#" class="panel__link">Подарочный код</a>
+					</div> 
+					<div class="panel__body js-accordion-body">После покупки купон появится в вашем Личном Кабинете на сайте в разделе Мои Купоны. В нем указаны уникальный код, условия акции и контактная информация заведения. Купоны действительны сразу после покупки, за исключением тех случаев, когда начало действия купонов отдельно указанно в условиях. Для того, чтобы воспользоваться предложением, достаточно предъявить распечатанный купон.</div>
+				</div>
+			</div>
+		</div>
+		<div class="item item_box">
+			<header class="item__head">
+				<div class="item__categ">Выберите способ оплаты</div>
+			</header>
+			<div class="item__body">
+				<div class="pay">
+					<a href="#" class="pay__link">
+						<span class="pay__img">
+							<img src="img/pay-privat.png" alt="img">
+						</span>
+						<span class="pay__title">Приват 24</span>
+					</a>
+					<a href="#" class="pay__link">
+						<span class="pay__img">
+							<img src="img/pay-card.png" alt="img">
+						</span>
+						<span class="pay__title">Пластиковая карта</span>
+					</a>
+					<a href="#" class="pay__link">
+						<span class="pay__img">
+							<img src="img/pay-kupon.png" alt="img">
+						</span>
+						<span class="pay__title">С карты Покупон</span>
+					</a>
+					<a href="#" class="pay__link">
+						<span class="pay__img">
+							<img src="img/pay-box.png" alt="img">
+						</span>
+						<span class="pay__title">Терминалы 24</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+	
+	@@include('_footer.html')    
+</div>
+<!-- END out-->  
+</body>
+</html>  
