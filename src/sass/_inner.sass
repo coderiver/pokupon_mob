@@ -509,6 +509,10 @@
 			vertical-align: middle
 		&:active
 			background: #fdfdfd
+		&.is-inactive
+			i
+				+gray
+				opacity: 0.3
 	&__btn-back
 		left: 0 
 		border-right: 1px solid $border
@@ -533,24 +537,51 @@
 		.btn
 			min-width: 222px
 
+.profile
+	&__item
+		display: table
+		width: 100%
+		table-layout: fixed
+		+reg
+		border-top: 1px solid $border 
+		&:first-child
+			border: 0
+	&__title,
+	&__main
+		display: table-cell
+		padding: 6px 0 
+		height: 50px
+		vertical-align: middle
+	&__title
+		width: 150px
+		padding-right: 38px
+		font-size: 14px
+		color: $gray_d 
+		text-align: right
+	&__main
+		font-size: 18px
+		color: $dark 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.text
+	padding: 10px 30px 
+	color: $dark 
+	font-size: 15px
+	line-height: 1.33
+	&:last-child
+		padding-bottom: 90px
+	p
+		margin-bottom: 21px
+	ul
+		margin: 21px 0 
+		li
+			position: relative
+			padding-left: 11px
+			&:before
+				content: "-" 
+				position: absolute
+				left: 0
+				top: 0
+	
 
 
 

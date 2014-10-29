@@ -7,7 +7,7 @@
 .icon-prev
 	+svg(arr-prev,24,13)
 .icon-user
-	+svg(user,25,26)
+	+svg(user-act,25,26)
 .icon-important
 	+s(important)
 .balance-link
@@ -118,20 +118,23 @@
 	background: #ffe80c
 	font-size: 16px
 	+cbold
+	line-height: 1
 	color: $dark
 	text-shadow: 0 1px 0 #fff
 	text-transform: uppercase 
 	background: #fff111 
 	+g(#fff111, #ffdf07)
 	box-shadow: 0 1px 3px rgba(0,0,0,.33), inset 0 0 0 1px rgba(252,252,252,.15)
-	&_height
-		padding: 13px 15px 
 	&:hover
 		background: #ffdf07 
 		+g(#ffdf07, #fff111)
 	&:active
 		background: #ffdf07 
 		box-shadow: none 
+.btn_height
+	padding: 12px 15px 
+.btn_medium
+	padding: 9px 20px 
 .btn-more-wrap
 	margin: 20px 0 25px 
 	&.has-padding
