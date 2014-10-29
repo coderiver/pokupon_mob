@@ -406,13 +406,87 @@
 		&:active
 			top: 13px
 
+.promocode  
+	+clr
+	position: relative
+	margin: 0 4px 20px 0
+	+shadow
+	border-radius: 5px 
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		bottom: 0
+		right: -7px
+		width: 7px 
+		background: url(../img/paper-bg.png) 0 0 repeat-y
+	&__media
+		position: relative
+		float: left
+		margin-right: 7px
+		width: 210px
+		background: #fff 
+		border-radius: 5px 0 0 5px
+		&:after
+			content: ""
+			position: absolute
+			top: 0
+			bottom: 0
+			right: -7px
+			width: 7px 
+			background: url(../img/dots-bg.png) 0 2px repeat-y
+	&__img
+		display: block
+		height: 210px
+		overflow: hidden
+		border-radius: 5px 0 0 5px
+		img
+			display: block
+			width: 100%
+			height: auto
+			border-radius: 5px 0 0 5px
+	&__brand
+		position: absolute
+		top: 0
+		left: 10px
+	&__body
+		position: relative
+		+vertical
+		height: 210px
+		overflow: hidden
+		background: #fff 
+		//border-radius: 5px 5px 0 0
+		.icon-money
+			position: absolute
+			bottom: 13px
+			right: 8px
+		.icon-bookmark
+			position: absolute
+			right: 8px
+			top: 8px
 
-
-
-
-
-
-
+	&__main
+		display: inline-block
+		vertical-align: middle
+		padding: 0 20px 0 10px 
+		width: 100%
+		text-align: left
+		line-height: 1.1
+	&__title
+		font-size: 18px
+		+bold
+		color: #000 
+	.date
+		margin-top: 23px
+.date
+	font-size: 12px
+	color: #777
+	+reg
+	i
+		display: inline-block
+		vertical-align: middle
+		margin-right: 5px
+	
 
 
 
