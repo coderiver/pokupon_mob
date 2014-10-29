@@ -4,6 +4,12 @@
 	+s(money)
 .icon-bookmark
 	+s(bookmark)
+.icon-prev
+	+svg(arr-prev,24,13)
+.icon-user
+	+svg(user,25,26)
+.icon-important
+	+s(important)
 .balance-link
 	display: block
 	padding: 0 20px 
@@ -22,12 +28,11 @@
 		box-shadow: none
 	span
 		color: $green
-
 .btn-feedback
 	display: block
 	padding: 11px 10px 
 	border-radius: 5px
-	background: #3c474f
+	background: #3c474f 
 	text-align: center
 	line-height: 1.25
 	box-shadow: 0 1px 1px rgba(0,0,0,.5)
@@ -375,3 +380,103 @@
 		right: 16px 
 		margin-top: -4px 
 		+arr(8,8,#fff,b)
+
+.field
+	display: block
+	position: relative
+	margin-bottom: 8px
+	+clr
+	&.is-important
+		&:before
+			content: "!"
+			position: absolute
+			top: 9px
+			right: 10px
+			z-index: 2
+			width: 22px
+			height: 22px
+			line-height: 19px
+			background: #c33
+			text-align: center
+			border: 1px solid #c33
+			background: #ba2121 
+			+g(#e15050, #ba2121)
+			border-radius: 50% 
+			font-size: 16px
+			+cbold
+			color: #fff
+			text-shadow: 0 1px 3px #633 
+			box-shadow: inset 0 0 0 rgba(#fff, 0.15)
+		.input 
+			padding-right: 35px
+	&_date
+		&:before
+			content: "" 
+			position: absolute
+			right: 11px
+			top: 17px 
+			z-index: 2
+			+arr(9,8,$gray_d,b)
+	&__title 
+		float: left
+		padding: 12px 17px 0 0
+		width: 26%
+		font-size: 14px
+		color: $gray_d
+		text-align: right
+		+reg 
+	&__body
+		position: relative
+		float: left
+		width: 74%
+		i
+			position: absolute
+			top: 9px
+			right: 10px
+
+.input 
+	display: block 
+	padding: 0 8px  
+	width: 100%
+	height: 42px
+	background: #FFF
+	border: 1px solid #EEF1F2
+	border-radius: 2px
+	box-shadow: inset 1px 1px 0 rgba(#000, 0.2)
+	color: $dark
+	font-size: 18px
+	+reg 
+	&:focus
+		box-shadow: none
+	&[readonly]
+		border: 0
+		box-shadow: none 
+	&[type="date"]
+		opacity: 0
+		position: absolute
+		left: 0
+		top: 0
+		height: 42px
+		width: 100%
+		line-height: 42px
+		//border: 0
+		-webkit-appearance: none
+		border-radius: 0
+		
+.select
+	position: relative
+	&:after
+		content: "" 
+		position: absolute
+		right: 11px
+		top: 17px
+		+arr(9,8,$gray_d,b)
+	select
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 42px
+		opacity: 0
+	option
+		padding: 10px 

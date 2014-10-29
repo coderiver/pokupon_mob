@@ -488,18 +488,50 @@
 		margin-right: 5px
 	
 
-
-
-
-
-
-
-
-
-
-
-
-
+.box
+	margin-bottom: 25px
+	background: #fff
+	border-radius: 10px
+	+shadow
+	overflow: hidden
+	&__head
+		position: relative
+		border-bottom: 1px solid $border
+	&__btn-back,
+	&__btn-edit
+		position: absolute
+		top: 0
+		bottom: 0
+		width: 60px 
+		text-align: center
+		+vertical
+		i
+			vertical-align: middle
+		&:active
+			background: #fdfdfd
+	&__btn-back
+		left: 0 
+		border-right: 1px solid $border
+	&__btn-edit
+		right: 0
+		border-left: 1px solid $border
+		
+	&__title
+		padding: 18px 60px 
+		font-size: 18px
+		color: $dark
+		+cbold
+		text-transform: uppercase
+		text-align: center
+	
+	&__body
+		padding: 15px 20px 20px 15px
+	&__footer
+		text-align: center
+		border-top: 1px solid $border
+		padding: 18px 10px 
+		.btn
+			min-width: 222px
 
 
 

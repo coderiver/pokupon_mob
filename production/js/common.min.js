@@ -69,6 +69,7 @@ head.ready(function() {
     }
     number();
 
+
     $(".js-accordion-title").on("click", function(){
     	if ($(this).parents(".js-accordion").hasClass("is-active")) {
     		$(this).parents(".js-accordion").removeClass("is-active").find(".js-accordion-body").hide();
@@ -80,5 +81,27 @@ head.ready(function() {
     	}
     	
     	return false;
+    });
+
+
+    $(".js-select").each(function(){
+        var val = $(this).find("option:checked").val();
+        $(this).find(".input").val(val);
+
+    });
+
+    $(".js-select select").on("change",function(){
+        var val = $(this).val();
+        $(this).parents(".js-select").find(".input").val(val);
+    });
+
+    $(".js-input-date").each(function(){
+        var val = $(this).val();
+        $(this).parent().find(".js-input-date-value").val(val);
+    });
+    
+    $(".js-input-date").on("change",function(){
+        var val = $(this).val();
+        $(this).parent().find(".js-input-date-value").val(val);
     });
 });

@@ -1,0 +1,246 @@
+<!doctype html>
+<html>
+<head>
+	<title>Profile edit</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=480,user-scalable=no">
+	<!-- <meta name="viewport" content="initial-scale=1,user-scalable=no"> -->
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" media="all" href="css/screen.css" >
+</head>
+<body>
+<!-- BEGIN  out-->
+<div class="out">
+	<!-- BEGIN header-->
+	<div class="header">
+		<div class="header__top">
+			<button class="header__nav js-toggle-nav" type="button"></button>
+			<a class="header__logo" href="#">
+				<img src="img/logo.png" alt="logo">
+			</a>
+			<button class="header__search js-toggle" data-toggle="js-search" type="button"></button>
+		</div>
+		<div class="header__links">
+			<div class="location">
+				<a href="#" class="location__link">Днепропетровск</a>
+			</div>
+			<a href="#" class="header__user">Вход / Регистрация</a>
+		</div>
+		<div class="header__menu">
+			<ul class="menu"> 
+				<li class="menu__item is-marked">
+					<span class="menu__link"><span>Бесплатные купоны</span></span>
+					<ul class="menu__drop">
+						<li><a href="#">Сегодня</a></li>
+						<li><a href="#">Бесплатные купоны</a></li>
+						<li><a href="#">Рестораны</a></li>
+						<li><a href="#">Промокоды</a></li>
+					</ul>
+				</li>
+				<li class="menu__item">
+					<span class="menu__link"><span>Все акции</span></span>
+					<ul class="menu__drop">
+						<li><a href="#">Все акции</a></li>
+						<li><a href="#">Обучение</a></li>
+						<li><a href="#">Туризм</a></li>
+						<li><a href="#">Товары</a></li>
+						<li><a href="#">Услуги</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="search js-toggle-el js-search">
+			<div class="search__title">Поиск по сайту</div>
+			<div class="search__body">
+				<form>
+					<input class="search__input" type="text" placeholder="Поиск">
+					<button class="search__btn" type="submit">найти</button>
+				</form>
+			</div>
+		</div>
+		<div class="nav js-nav">
+			<div class="nav__main js-nav-main">
+				<a href="#" class="balance-link">На счету: <span>234 грн.</span></a>
+				<ul class="nav__list">
+					<li><a href="#">Мой профиль</a>
+					<li><a href="#">Мои купоны</a>
+					<li><a href="#">Пополнение счета</a>
+					<li><a href="#">Бонусная программа</a>
+					<li><a href="#">Пригласить друга</a>
+				</ul>
+				<div class="nav__exit">
+					<a href="#">Выйти</a>
+				</div>
+			</div>
+			<i class="nav__overlay js-nav-overlay"></i>
+		</div>
+	</div>
+	<!-- END header--> 
+	<div class="page-nav">
+		<a href="#" class="page-nav__prev">
+			<i></i>
+			Перейти к списку акций
+		</a>
+	</div>
+	<div class="main">
+		<div class="box">
+			<form>
+				<div class="box__head">
+					<a href="#" class="box__btn-back"><i class="icon-prev"></i></a>
+					<div class="box__title">Редактирование профиля</div>
+					<a href="#" class="box__btn-edit"><i class="icon-user"></i></a>
+				</div>
+				<div class="box__body">
+					<label class="field">
+						<span class="field__title">Личный номер</span>
+						<span class="field__body">
+							<input type="text" class="input" readonly value="8092553">
+						</span>
+					</label>
+					<label class="field">
+						<span class="field__title">E-mail</span>
+						<span class="field__body">
+							<input type="email" class="input">
+						</span>
+					</label>
+					<label class="field">
+						<span class="field__title">Фамилия</span>
+						<span class="field__body">
+							<input type="text" class="input">
+						</span>
+					</label>
+					<label class="field">
+						<span class="field__title">Имя</span>
+						<span class="field__body">
+							<input type="text" class="input">
+						</span>
+					</label>
+					<label class="field">
+						<span class="field__title">Номер телефона</span>
+						<span class="field__body">
+							<input type="tel" class="input">
+						</span>
+					</label>
+					<div class="field">
+						<span class="field__title">Пол</span>
+						<div class="field__body">
+							<div class="select js-select">
+								<input type="text" class="input">
+								<select>
+									<option value="Мужской">Мужской</option>
+									<option value="Женский">Женский</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="field field_date">
+						<span class="field__title">День рождения</span>
+						<div class="field__body">
+							<input type="text" class="input js-input-date-value">
+							<input type="date" class="input js-input-date" value="1995-10-12">
+						</div>
+					</div>
+					<label class="field">
+						<span class="field__title">Город</span>
+						<div class="field__body">
+							<div class="select js-select">
+								<input type="text" class="input">
+								<select>
+									<option value="Ужгород">Ужгород</option>
+									<option value="Киев">Киев</option>
+								</select>
+							</div>
+						</div>
+					</label> 
+					<label class="field is-important"> 
+						<span class="field__title">Текущий пароль</span>
+						<span class="field__body">
+							<input type="password" class="input">
+							<!-- <i class="icon-important"></i> -->
+						</span>
+					</label>
+					<label class="field is-important">
+						<span class="field__title">Новый пароль</span>
+						<span class="field__body">
+							<input type="password" class="input">
+							<!-- <i class="icon-important"></i> -->
+						</span>
+					</label>  
+					<label class="field is-important">
+						<span class="field__title">Повторите новый пароль</span>
+						<span class="field__body">
+							<input type="password" class="input">
+							<!-- <i class="icon-important"></i> -->
+						</span>
+					</label>   
+					<label class="field">
+						<span class="field__title">Получать ежедневную рассылку</span>
+						<div class="field__body">
+							<div class="select js-select">
+								<input type="text" class="input">
+								<select>
+									<option value="Да">Да</option>
+									<option value="Нет">Нет</option>
+								</select>
+							</div>
+						</div>
+					</label>
+					<label class="field">
+						<span class="field__title">Получать персональную рассылку</span>
+						<div class="field__body">
+							<div class="select js-select">
+								<input type="text" class="input">
+								<select>
+									<option value="Да">Да</option>
+									<option value="Нет">Нет</option>
+								</select>
+							</div>
+						</div>
+					</label>
+				</div>
+				<div class="box__footer">
+					<button class="btn btn_heigth" type="submit">Сохранить изменения</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	
+	
+	<!-- BEGIN  footer-->
+	<div class="footer">
+		<ul class="footer__nav">
+			<li><a href="#">Пресса о нас</a></li>
+			<li><a href="#">Прошедшие акции</a></li>
+			<li><a href="#">ЧаВо</a></li>
+			<li><a href="#">Пользовательское соглашение</a></li>
+			<li><a href="#">Политика конфиденциальности</a></li>
+			<li><a href="#">Партнёрам</a></li>
+		</ul>
+		<a href="#" class="btn-feedback">
+			У вас есть вопросы или предложения?
+			<span>напишите нам</span>
+		</a>
+		<div class="footer__soc">
+			<div>
+				<a href="#"></a>
+				<a href="#"></a>
+				<a href="#"></a>
+			</div>
+		</div>
+		<ul class="footer__contacts">
+			<li><a href="tel:+38044585-80-86">+38 (044) 585-80-86</a></li>
+			<li><a href="mailto:partners@pokupon.ua">partners@pokupon.ua</a></li>
+		</ul>
+		<div class="footer__pay">
+			<img src="img/mc.png" width="155" alt="img">
+			<img src="img/visa.png" alt="img">
+		</div>
+	</div>
+	<!-- END footer--> 
+	<!-- load scripts -->
+	<script src="js/lib/head.js" data-headjs-load="js/init.js"></script>    
+</div>
+<!-- END out-->  
+</body>
+</html>  
