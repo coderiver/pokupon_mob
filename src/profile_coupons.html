@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+	<title>Profile coupons</title>
+	@@include('_head.html')
+</head>
+<body>
+<!-- BEGIN  out-->
+<div class="out">
+	@@include('_header.html')
+	<div class="page-nav">
+		<a href="#" class="page-nav__prev">
+			<i></i>
+			Перейти к списку акций
+		</a>
+	</div>
+	<div class="coupons-wrap">
+		<a class="btn-action" href="#">Мои Активные неиспользованные купоны</a>
+		@@include('_coupon.html')  
+		@@include('_coupon.html')  
+		@@include('_coupon.html')  
+		<div class="btn-more-wrap has-padding">
+			<a href="#" class="btn-more">Показать больше</a>
+		</div>
+	</div>
+
+
+	
+	
+	@@include('_footer.html')    
+</div>
+<!-- END out-->  
+</body>
+</html>  
