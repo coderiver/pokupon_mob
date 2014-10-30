@@ -182,7 +182,7 @@
 	display: inline-block
 	border: 1px solid #ffdf07
 	padding: 7px 15px 
-	border-radius: 10px
+	border-radius: 5px
 	background: #ffe80c
 	font-size: 16px
 	+cbold
@@ -212,6 +212,27 @@
 		+g(#b8b8b8,#e0e0e0)
 	&:active
 		background: #cbcbcb
+		
+
+.btn-submit
+	padding: 0 17px 
+	height: 42px
+	line-height: 42px
+	background: #88c800
+	box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.2)
+	+g(#bbdf00,#62b500)
+	font-size: 16px
+	color: $dark
+	+cbold
+	border-radius: 3px
+	text-transform: uppercase 
+	text-shadow: 0 1px 0 rgba(#fff, 0.3)
+	&:hover
+		background: #62B500 
+		+g(#62b500,#bbdf00)
+	&:active
+		background: #62b500 
+
 .btn-more-wrap
 	margin: 20px 0 25px 
 	&.has-padding
@@ -530,7 +551,21 @@
 			position: absolute
 			top: 9px
 			right: 10px
-
+	&__btn
+		float: left
+	&__link
+		float: right
+		height: 42px
+		line-height: 42px
+		a
+			font-size: 12px
+			color: $gray_d
+			text-decoration: underline
+			&:hover
+				text-decoration: none
+.field_action
+	+clr
+	
 .input 
 	display: block 
 	padding: 0 8px  
@@ -538,7 +573,7 @@
 	height: 42px
 	background: #FFF
 	border: 1px solid #EEF1F2
-	border-radius: 2px
+	border-radius: 3px
 	box-shadow: inset 1px 1px 0 rgba(#000, 0.2)
 	color: $dark
 	font-size: 18px
@@ -559,6 +594,12 @@
 		//border: 0
 		-webkit-appearance: none
 		border-radius: 0
+	+placeholder
+		color: #999
+		+reg 
+	&_small
+		font-size: 14px
+		color: $gray_d 
 		
 .select
 	position: relative
@@ -577,7 +618,20 @@
 		opacity: 0
 	option
 		padding: 10px 
-		
+	&__placeholder
+		position: absolute
+		left: 8px
+		top: 0
+		height: 42px
+		line-height: 42px
+		color: #999
+		font-size: 14px
+		+reg 
+.select_city
+	.input
+		padding-left: 80px
+	
+
 .balance
 	padding: 18px 30px 
 	background: #ff9
@@ -729,3 +783,104 @@
 	+svg(close2,20,20)
 	&:active
 		margin-top: 1px
+
+.popup
+	position: fixed
+	top: 0
+	left: 50%
+	right: 0
+	bottom: 0
+	z-index: 100
+	margin-left: -240px 
+	width: 480px
+	background: #fff
+	overflow-y: auto
+	display: none
+	&.is-active
+		display: block
+	.logo
+		display: inline-block
+		margin: -5px 0 20px
+	&__head
+		border-top: 5px solid $dark 
+		padding: 0 10px 18px 
+		text-align: center
+		background: $light url(../img/bg-light.png) 0 0 repeat
+	&__title
+		font-size: 16px
+		+cbold
+		color: $dark
+		text-transform: uppercase 
+		text-align: center
+	&__body
+		position: relative
+		padding: 17px 30px 
+		background: #fff
+		+shadow 
+	&__footer
+		padding: 17px 20px 20px 
+		background: $light url(../img/bg-light.png) 0 0 repeat
+		+clr
+		.btn
+			float: right
+			width: 182px
+			&:first-child
+				float: left
+	&__in
+		padding: 0 10px 
+	&__form
+		margin-bottom: 30px
+		padding: 0 20px 
+		.popup__title
+			padding-bottom: 8px
+	.btn-close
+		position: absolute
+		top: 22px
+		right: 20px
+		&:active
+			margin-top: 1p
+.popup_simple
+	background: $light url(../img/bg-light.png) 0 0 repeat
+	.popup__head
+		background: none
+	
+.soc-enter
+	margin: 30px 0 37px
+	padding: 24px 0 27px 
+	font-size: 0
+	text-align: center
+	background: rgba(#fff,.5)
+	border-radius: 10px
+	box-shadow: 0 1px 1px rgba(#000,.5)  
+	.popup__title
+		margin-bottom: 27px
+	a
+		display: inline-block
+		position: relative
+		margin-left: 17px
+		vertical-align: top
+		width: 52px
+		height: 52px
+		text-align: center
+		line-height: 52px
+		box-shadow: 0 1px 1px rgba(#000,.3) 
+		+g(#6297bf, #36538a)
+		border-radius: 5px 
+		&:first-child
+			margin-left: 0
+		img
+			vertical-align: middle
+			position: relative
+			z-index: 2
+		&.soc-enter__gp
+			+g(#db4242, #bd2424)
+		&.soc-enter__yandex
+			background: none
+			box-shadow: none 
+			width: 58px
+			&:before
+				content: ""
+				position: absolute
+				left: 0
+				top: 0
+				+sr(enter-ya) 

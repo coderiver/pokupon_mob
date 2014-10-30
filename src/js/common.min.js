@@ -109,12 +109,24 @@ head.ready(function() {
         $(".js-input-tel").mask("380 99 9999999");
     }
 
-    $(".js-open-window").on("click",function(){
-        $(".js-window").toggleClass("is-active");
-        $("html").toggleClass("no-scroll");
-    }); 
-    $(".js-window-close").on("click",function(){
-        $(".js-window").removeClass("is-active");
-        $("html").removeClass("no-scroll");
+    // $(".js-open-window").on("click",function(){
+    //     $(".js-window").toggleClass("is-active");
+    //     $("html").toggleClass("no-scroll");
+    // }); 
+    // $(".js-window-close").on("click",function(){
+    //     $(".js-window").removeClass("is-active");
+    //     $("html").removeClass("no-scroll");
+    // });
+    $(".js-open-popup").on("click", function(){
+        var el = $(this).attr("data-popup");
+        $("."+el).addClass("is-active");
+        $("html").addClass("no-scroll");
+        return false;
     });
+    $(".js-close-popup").on("click", function(){
+        $(".js-popup").removeClass("is-active");
+        $("html").removeClass("no-scroll");
+        return false;
+    });
+   
 });
