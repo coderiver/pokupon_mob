@@ -192,17 +192,26 @@
 	text-transform: uppercase 
 	background: #fff111 
 	+g(#fff111, #ffdf07)
+	text-align: center
 	box-shadow: 0 1px 3px rgba(0,0,0,.33), inset 0 0 0 1px rgba(252,252,252,.15)
 	&:hover
 		background: #ffdf07 
 		+g(#ffdf07, #fff111)
 	&:active
 		background: #ffdf07 
-		box-shadow: none 
+		box-shadow: none
 .btn_height
 	padding: 12px 15px 
 .btn_medium
 	padding: 9px 20px 
+.btn_reset
+	background: #cbcbcb 
+	border-color: #ccc 
+	+g(#e0e0e0, #b8b8b8)
+	&:hover
+		+g(#b8b8b8,#e0e0e0)
+	&:active
+		background: #cbcbcb
 .btn-more-wrap
 	margin: 20px 0 25px 
 	&.has-padding
@@ -430,6 +439,12 @@
 		.panel__title
 			text-transform: uppercase
 			+cbold
+	&_options
+		background: none
+		.panel__title
+			background: #fff 
+		.panel__body
+			padding: 15px 10px 
 .panel_single
 	margin-bottom: 0
 	.panel__title
@@ -682,3 +697,35 @@
 		top: 50%
 		left: 12px
 		margin-top: -10px
+		
+.window
+	position: fixed
+	top: 0
+	left: 50%
+	right: 0
+	bottom: 0
+	z-index: 100
+	margin-left: -240px 
+	width: 480px
+	background: #eef1f2 
+	overflow-y: auto
+	display: none
+	&.is-active
+		display: block
+	&__title
+		border-top: 5px solid $dark 
+		padding: 15px 50px 22px 30px 
+		background: #3195ec url(../img/bg-blue-dark.png) 0 0 repeat
+		color: #fff
+		font-size: 20px
+		line-height: 1.2
+		+bold 
+	.btn-hide
+		top: 42px
+		right: 37px
+
+.btn-hide
+	position: absolute
+	+svg(close2,20,20)
+	&:active
+		margin-top: 1px

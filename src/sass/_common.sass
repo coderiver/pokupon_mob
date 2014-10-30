@@ -81,7 +81,8 @@ $red: #c30
 	text-shadow: 0 1px 0 rgba(#000, .5)
 =shadow
 	box-shadow: 0 0 3px rgba(0,0,0,.2)
-.has-open-nav
+.has-open-nav,
+.no-scroll
 	overflow: hidden
 	body
 		overflow: hidden
@@ -437,18 +438,54 @@ a
 			&:first-child
 				margin-left: 0
 
+.popup
+	position: fixed
+	top: 0
+	left: 50%
+	right: 0
+	bottom: 0
+	z-index: 100
+	margin-left: -240px 
+	width: 480px
+	background: #fff
+	overflow-y: auto
+	display: none
+	&.is-active
+		display: block
+	.logo
+		display: inline-block
+		margin-bottom: 20px
+	&__head
+		border-top: 5px solid $dark 
+		padding: 0 10px 18px 
+		text-align: center
+		background: $light url(../img/bg-light.png) 0 0 repeat
+	&__title
+		font-size: 16px
+		+cbold
+		color: $dark
+		text-transform: uppercase 
 
-
-
-
-
-
-
-
-
-
-
-
+	&__body
+		position: relative
+		padding: 17px 30px 
+		background: #fff
+		+shadow 
+	&__footer
+		padding: 17px 20px 20px 
+		background: $light url(../img/bg-light.png) 0 0 repeat
+		+clr
+		.btn
+			float: right
+			width: 182px
+			&:first-child
+				float: left
+	.btn-close
+		position: absolute
+		top: 22px
+		right: 20px
+		&:active
+			margin-top: 1px
 
 
 

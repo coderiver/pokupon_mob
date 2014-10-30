@@ -527,6 +527,7 @@
 	&__head
 		position: relative
 		border-bottom: 1px solid $border
+		
 	&__btn-back,
 	&__btn-edit
 		position: absolute
@@ -549,7 +550,6 @@
 	&__btn-edit
 		right: 0
 		border-left: 1px solid $border
-		
 	&__title
 		padding: 18px 60px 
 		font-size: 18px
@@ -557,7 +557,6 @@
 		+cbold
 		text-transform: uppercase
 		text-align: center
-	
 	&__body
 		padding: 15px 20px 20px 15px
 	&__footer
@@ -566,7 +565,17 @@
 		padding: 18px 10px 
 		.btn
 			min-width: 222px
-
+	&__info
+		float: left
+		width: 340px
+.box_options
+	.box__head
+		+clr
+		padding: 10px 10px 10px 20px 
+		.counter
+			float: right
+	.box__body
+		padding: 0
 .profile
 	&__item
 		display: table

@@ -108,4 +108,13 @@ head.ready(function() {
     if ($(".js-input-tel").length) {
         $(".js-input-tel").mask("380 99 9999999");
     }
+
+    $(".js-open-window").on("click",function(){
+        $(".js-window").toggleClass("is-active");
+        $("html").toggleClass("no-scroll");
+    }); 
+    $(".js-window-close").on("click",function(){
+        $(".js-window").removeClass("is-active");
+        $("html").removeClass("no-scroll");
+    });
 });
