@@ -104,4 +104,8 @@ head.ready(function() {
         var val = $(this).val();
         $(this).parent().find(".js-input-date-value").val(val);
     });
+
+    if ($(".js-input-tel").length) {
+        $(".js-input-tel").mask("380 99 9999999");
+    }
 });

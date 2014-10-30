@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+<head>
+	<title>Profile friends</title>
+	@@include('_head.html')
+</head>
+<body>
+<!-- BEGIN  out-->
+<div class="out">
+	@@include('_header_logined.html')
+	<div class="balance">
+		<div>Ваш номер телефона не активирован</div>
+	</div>
+	<div class="page-nav">
+		<a href="#" class="page-nav__prev">
+			<i></i>
+			Перейти к списку акций
+		</a>
+	</div>
+	<div class="main">
+		<div class="item item_box to-center">
+			<header class="item__head">
+				<div class="item__categ">Приглашайте друзей и получайте бонусы!</div>
+			</header>
+			<div class="item__body">
+				Для начисления бонусов активируйте ваш мобильный <br> телефон в бонусной программе
+				<div class="stat">
+					<div class="stat__item">
+						<strong>85</strong>
+						<p>Количество приглашённых друзей</p>
+					</div>
+					<div class="stat__item">
+						<strong>23</strong>
+						<p>Активировали бонусную программу</p>
+					</div>
+					<div class="stat__item">
+						<strong>410</strong><span>грн</span>
+						<p>Количество приглашённых друзей</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="item item_box item_rules">
+			<div class="item__rules">
+				<div class="item__categ">Вы можете получить по 10 грн. за каждого друга, приглашённого на сайт!</div>
+				<ol>
+					<li>Отправьте своим друзьям уникальную ссылку на наш сайт (см. ниже). </li>
+					<li>За каждую регистрацию друга вы получите по 0 грн., если он активирует свою бонусную программу. </li>
+					<li>За первую покупку друга вы получите 10 грн., если он активирует свою бонусную программу (покупки только за бонусы не засчитываются).</li>
+				</ol>
+			</div>
+			<div class="item__body">
+				<div class="bonus">
+					<div class="bonus__media">
+						<div class="bonus__price">
+							<span>10</span> грн
+							<div>вам на счёт</div>
+						</div>
+					</div>
+					<div class="bonus__info">
+						<a class="bonus__title" href="#">Разместите уникальную ссылку на наш сайт в социальных сетях</a>
+						<p>Отправьте ссылку в социальные сервисы и получите на Ваш счёт 10 грн. за каждого друга.</p>
+					</div>
+					<div class="soc-link">
+						<a href="#"><i class="icon-fb"></i>Разместить</a>
+						<a href="#"><i class="icon-tw"></i>Tweet</a>
+						<a href="#"><i class="icon-vk"></i>Поделиться</a>
+					</div> 
+				</div>
+				<div class="bonus">
+					<div class="bonus__media">
+						<div class="bonus__price">
+							<span>10</span> грн
+							<div>вам на счёт</div>
+						</div>
+					</div>
+					<div class="bonus__info">
+						<a class="bonus__title" href="#">Пригласите друзей на наш сайт из Gmail</a>
+						<p>Это самый простой способ пригласить друзей и заработать больше денег.</p>
+					</div> 
+					<div class="soc-link soc-link_width">
+						<a href="#"><i class="icon-gp"></i>Пригласить друзей через Google Gmail</a>
+					</div> 
+				</div>
+				<div class="bonus">
+					<div class="bonus__media">
+						<div class="bonus__price">
+							<span>10</span> грн
+							<div>вам на счёт</div>
+						</div>
+					</div>
+					<div class="bonus__info">
+						<a class="bonus__title" href="#">Отправьте другу уникальную ссылку</a>
+						<p>Просто скопируйте вашу уникальную ссылку и отправьте её другу</p>
+					</div> 
+					<div class="copy-link">	
+						<button type="button"></button>
+						<input class="copy-link__input" readonly
+						 type="text" value="http://pokupon.ua/kiev?invite=6u8y1nvt3480h0tk1o9">
+					</div>
+				</div>
+				<div class="bonus">
+					<div class="bonus__media">
+						<div class="bonus__price">
+							<span>10</span> грн
+							<div>вам на счёт</div>
+						</div>
+					</div>
+					<div class="bonus__info">
+						<a class="bonus__title" href="#">Отправьте другу приглашение по почте</a>
+						<p>Введите e-mail вашего друга и нажмите кнопку «отправить приглашение»</p>
+					</div> 
+					<div class="invite">
+						<form>
+							<i class="icon-email"></i>
+							<input class="invite__input" type="text" placeholder="E-mail друга">
+							<button class="invite__btn" type="submit">отправить</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	@@include('_footer.html')    
+</div>
+<!-- END out-->  
+</body>
+</html>  

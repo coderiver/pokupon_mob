@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+	<title>Profile add money</title>
+	@@include('_head.html')
+</head>
+<body>
+<!-- BEGIN  out-->
+<div class="out">
+	@@include('_header_logined.html')
+	<div class="balance">
+		<div>Ваш номер телефона не активирован</div>
+	</div>
+	<div class="page-nav">
+		<a href="#" class="page-nav__prev">
+			<i></i>
+			Перейти к списку акций
+		</a>
+	</div>
+	<div class="main">
+		<div class="item item_box">
+			<header class="item__head">
+				<div class="item__categ">Активация номера</div>
+			</header>
+			<div class="item__body">
+				<div class="add-money">
+					<p>Введите номер мобильного телефона, чтобы активировать бонусную программу</p>
+					<div class="add-money__subtitle">Активируйте и получите <span>10 грн.</span></div>
+					<form>
+						<div class="tel">
+							<input type="tel" class="input js-input-tel" placeholder="380 XX XXXXXXX">
+						</div>
+						<button class="btn btn_medium" type="submit">Привязать номер к аккаунту</button>
+					</form>
+				</div> 
+			</div>
+		</div>
+		<div class="item item_box">
+			<header class="item__head">
+				<div class="item__categ">Как получить бонусы?</div>
+			</header>
+			<div class="item__body">
+				<div class="bonus">
+					<div class="bonus__media">
+						<div class="bonus__price"><span>10</span> грн</div>
+						<a href="#"><img src="img/bonus.png" alt="img"></a>
+					</div>
+					<div class="bonus__info">
+						<a class="bonus__title" href="#">Бонусы за регистрацию</a>
+						<p>После регистрации на сайте на ваш личный счет были начислены 10 грн. Вы можете использовать их для покупки акций.</p>
+					</div>
+				</div>
+				<div class="bonus">
+					<div class="bonus__media">
+						<div class="bonus__price"><span>10</span> грн</div>
+						<a href="#"><img src="img/bonus.png" alt="img"></a>
+					</div>
+					<div class="bonus__info">
+						<a class="bonus__title" href="#">Бонусы за первую покупку друга</a>
+						<p>Когда ваш друг совершает свою первую покупку, вы получаете за это 10 грн.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="text text_center">
+			<p>Телефонный номер необходим исключительно для подтверждения вашего аккаунта и обратной связи. Мы не будем его использовать в коммерческих целях.</p>
+		</div>
+	</div>
+	@@include('_footer.html')    
+</div>
+<!-- END out-->  
+</body>
+</html>  
