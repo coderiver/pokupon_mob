@@ -128,5 +128,17 @@ head.ready(function() {
         $("html").removeClass("no-scroll");
         return false;
     });
+
+    var hash = window.location.hash;
+    $(hash).show();
+    $('.js-tabs a').click(function (e) {
+        var content = $(this).attr("href");
+        $(this).parents(".js-tabs").find("li").removeClass("is-active");
+        $(this).parent().addClass("is-active");
+        $(this).parents(".js-tabs-group").find(".js-tabs-content").hide();
+        $(content).show();
+        window.location.hash = this.hash;
+        return false;
+    });
    
 });
