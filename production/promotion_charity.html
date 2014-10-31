@@ -11,7 +11,7 @@
 <body>
 <!-- BEGIN  out-->
 <div class="out">
-	<!-- BEGIN header-->
+	<!-- BEGIN header--> 
 	<div class="header">
 		<div class="header__top">
 			<button class="header__nav js-toggle-nav" type="button"></button>
@@ -49,8 +49,8 @@
 						<li><a href="#">Услуги</a></li>
 					</ul>
 				</li>
-			</ul>
-		</div>
+			</ul> 
+		</div> 
 		<div class="form js-toggle-el js-search">
 			<div class="form__title">Поиск по сайту</div>
 			<div class="form__body">
@@ -59,7 +59,7 @@
 					<button class="form__btn" type="submit">найти</button>
 				</form>
 			</div>
-		</div>
+		</div> 
 		<div class="nav js-nav"> 
 			<div class="nav__main js-nav-main">
 				<a href="#" class="balance-link">На счету: <span>234 грн.</span></a>
@@ -110,12 +110,12 @@
 			<a href="#" class="btn btn_height">Помочь</a>
 		</div>
 	</div>
-	<div class="js-tab-group">
-		<ul class="tab-nav">
-			<li class="is-active"><a href="#"><span>Описание</span></a></li>
-			<li><a href="#"><span>Комментарии</span></a></li>
+	<div class="js-tabs-group">
+		<ul class="tab-nav js-tabs">
+			<li class="is-active"><a href="#js-tab-description"><span>Описание</span></a></li>
+			<li><a href="#js-tab-comments"><span>Комментарии</span></a></li>
 		</ul>
-		<div class="tab-nav-content">
+		<div class="tab-nav-content js-tabs-content" data-id="#js-tab-description" style="display:block">
 			<div class="article">
 				<div class="article__in">
 					​<p>Курорт Сходница - это исцеляющая земля!
@@ -137,18 +137,53 @@
 				</div> 
 			</div>
 		</div>
+		<div class="tab-nav-content js-tabs-content" data-id="#js-tab-comments">
+			<div class="article">
+				<div class="article__in">
+					​<p>Курорт Сходница - это исцеляющая земля!
+					Сюда приезжают за оздоровлением и за известной на весь мир лечебной водой «Нафтуся», которая считается эликсиром здоровья.</p>
+					<div class="link-more">
+						<span>больше</span>
+						<a href="#" class="dots-more"></a>
+					</div>
+				</div> 
+			</div>
+		</div>
 	</div>
-	<div class="js-tab-group">
-		<ul class="tab-nav">
-			<li><a href="#"><span>Условия акции</span></a></li>
-			<li class="is-active"><a href="#"><span>Особенности</span></a></li>
-			<li><a href="#"><span>Адрес заведения</span></a></li>
+	<div class="js-tabs-group">
+		<ul class="tab-nav js-tabs">
+			<li class="is-active"><a href="#js-tab-terms"><span>Условия акции</span></a></li>
+			<li><a href="#js-tab-features"><span>Особенности</span></a></li>
+			<li><a href="#js-tab-address"><span>Адрес заведения</span></a></li>
 		</ul>
-		<div class="tab-nav-content">
+		<div class="tab-nav-content js-tabs-content" data-id="#js-tab-terms" style="display:block">
 			<div class="article">
 				<div class="article__in">
 					​<p><strong>Современное реанимационные оборудование позволяет значительно повысить шансы на выживание ребенка и его крепкое здоровье в бедующем.</strong></p>
 					<p><strong>Перфузоры</strong> - это устройства, позволяющие вводить медикаментозные препараты и растворы с исключительно высокой точностью. Порой счёт идет на десятые доли миллилитров в час (особенно часто это применяется в отделении реанимации).</p>
+					<p><strong>Инкубатор</strong> - аппарат в виде открытой кроватки-грелки или закрытого инкубатора с искусственным микроклиматом для выхаживания недоношенных детей и больных новорожденных, обеспечивающий поддержание постоянной температуры тела.</p>
+					<div class="link-more">
+						<span>больше</span>
+						<a href="#" class="dots-more"></a>
+					</div>
+				</div> 
+			</div>
+		</div>
+		<div class="tab-nav-content js-tabs-content" data-id="#js-tab-features">
+			<div class="article">
+				<div class="article__in">
+					​<p><strong>Современное реанимационные оборудование позволяет значительно повысить шансы на выживание ребенка и его крепкое здоровье в бедующем.</strong></p>
+					<div class="link-more">
+						<span>больше</span>
+						<a href="#" class="dots-more"></a>
+					</div>
+				</div> 
+			</div>
+		</div
+		><div class="tab-nav-content js-tabs-content" data-id="#js-tab-address">
+			<div class="article">
+				<div class="article__in">
+					​
 					<p><strong>Инкубатор</strong> - аппарат в виде открытой кроватки-грелки или закрытого инкубатора с искусственным микроклиматом для выхаживания недоношенных детей и больных новорожденных, обеспечивающий поддержание постоянной температуры тела.</p>
 					<div class="link-more">
 						<span>больше</span>
@@ -223,9 +258,9 @@
 		</a>
 		<div class="footer__soc">
 			<div>
-				<a href="#"></a>
-				<a href="#"></a>
-				<a href="#"></a>
+				<a href="#"><img src="img/soc-fb.svg" width="9" alt="img"></a>
+				<a href="#"><img src="img/soc-tw.svg" width="21" alt="img"></a>
+				<a href="#"><img src="img/soc-vk.svg" width="12" alt="img"></a>
 			</div>
 		</div>
 		<ul class="footer__contacts">

@@ -8,6 +8,28 @@ head.ready(function() {
 		$(".js-nav").removeClass("is-active");
 	});
 
+    
+    $("body").on('scroll touchmove mousewheel', function(e){
+       if ($('html').hasClass('has-open-nav')) {
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+       }
+    });
+
+    $('.touch body').swipe({
+        swipeLeft: function(event, direction, distance, duration, fingerCount) {
+            $("html").removeClass("has-open-nav");
+            $(".js-nav").removeClass("is-active");
+            $(".js-toggle-nav").removeClass("is-active");
+        }
+        // swipeRight: function(event, direction, distance, duration, fingerCount) {
+        //     $("html").addClass("has-open-nav")
+        // }
+        //Default is 75px, set to 0 for demo so any distance triggers swipe
+        //threshold: 0
+    });
+
 	$(".js-toggle").on("click", function(event){
 		var el = $(this).attr("data-toggle");
 		$(this).toggleClass("is-active");
@@ -129,15 +151,34 @@ head.ready(function() {
         return false;
     });
 
-    var hash = window.location.hash;
-    $(hash).show();
-    $('.js-tabs a').click(function (e) {
+    function tabsLoad() {
+        var hash = window.location.hash;
+        if (hash) {
+            $('[href="'+hash+'"]').parents(".js-tabs-group").find(".js-tabs-content").hide();
+            $('[data-id="'+hash+'"]').show();
+            $('[href="'+hash+'"]').parents(".js-tabs").find("li").removeClass("is-active");
+            $('[href="'+hash+'"]').parent().addClass("is-active");
+        }
+        else {
+            $('.js-tabs li:first').addClass("is-active");
+            $('.js-tabs').next().show();
+        }
+        
+    }
+   tabsLoad();
+   // alert(hash);
+    $('.js-tabs a').on("click",function (e) {
         var content = $(this).attr("href");
         $(this).parents(".js-tabs").find("li").removeClass("is-active");
         $(this).parent().addClass("is-active");
         $(this).parents(".js-tabs-group").find(".js-tabs-content").hide();
-        $(content).show();
+        $('[data-id="'+content+'"]').show();
         window.location.hash = this.hash;
+        return false;
+    });
+
+    $(".js-message-close").on("click",function (e) {
+        $(this).parents(".js-message").fadeOut(200);
         return false;
     });
    
