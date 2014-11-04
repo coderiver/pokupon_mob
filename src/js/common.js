@@ -30,6 +30,10 @@ head.ready(function() {
         //threshold: 0
     });
 
+    // $(document).on("click touchstart",".js-sidebar-overlay", function(){
+    //     $("html").removeClass("has-open-nav");
+    // });
+
 	$(".js-toggle").on("click", function(event){
 		var el = $(this).attr("data-toggle");
 		$(this).toggleClass("is-active");
