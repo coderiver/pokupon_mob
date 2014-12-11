@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html class="has-open-window">
 <head>
 	<title>Promotion</title>
 	<meta charset="utf-8">
@@ -171,7 +171,7 @@
 			</div>
 		</div>
 		<div class="btn-wrap">
-			<a href="#" class="btn btn_height">Выбрать</a>
+			<a href="#" data-popup="js-popup-promo" class="btn btn_height js-open-popup">Выбрать</a>
 		</div>
 	</div>
 	<div class="tab-group js-tabs-group">
@@ -295,7 +295,24 @@
 			<a href="#" class="btn-more">Показать больше</a>
 		</div>
 	</div>
-	
+	<div class="window js-popup js-popup-promo has-bg is-active">
+		<div class="window__title">Отправить комментарий <button class="btn-hide js-close-popup"></button></div>
+		<a href="#" class="page-nav">
+			Перейти к списку акций
+		</a>
+		<div class="window__body">
+			<div class="window__in">
+				<label class="field">
+					<input type="text" class="input input_small input_mod" placeholder="Ваше имя">
+				</label>
+				<label class="field">
+					<textarea class="input input_textarea input_mod" placeholder="Ваш комментарий"></textarea>
+				</label>
+				<div class="to-center"><button class="btn btn_medium" type="submit">Отправить</button></div>
+			</div>
+		</div>
+		
+	</div>
 	<!-- BEGIN  footer-->
 	<div class="footer">
 		<ul class="footer__nav">
@@ -332,4 +349,4 @@
 </div>
 <!-- END out-->  
 </body>
-</html>  
+</html>   

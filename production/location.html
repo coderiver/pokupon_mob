@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-	<title>Profile friends</title>
+	<title>index</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=480,user-scalable=no">
 	<!-- <meta name="viewport" content="initial-scale=1,user-scalable=no"> -->
@@ -11,7 +11,7 @@
 <body>
 <!-- BEGIN  out-->
 <div class="out">
-	<!-- BEGIN header-->
+	<!-- BEGIN header--> 
 	<div class="header">
 		<div class="header__top">
 			<button class="header__nav js-toggle-nav" type="button"></button>
@@ -25,10 +25,10 @@
 				<div class="location">
 					<a href="#" class="location__link js-toggle" data-toggle="js-toggle-location">Днепропетровск</a>
 				</div>
-				<a href="#" class="header__user is-logined">Petrov Vasily Ivanovych</a>
+				<a href="#" data-popup="js-popup-enter" class="header__user js-open-popup">Вход / Регистрация</a>
 			</div>
 		</div>
-		<!-- <div class="header__menu">
+		<div class="header__menu">
 			<ul class="menu"> 
 				<li class="menu__item is-marked">
 					<span class="menu__link"><span>Бесплатные купоны</span></span>
@@ -49,8 +49,8 @@
 						<li><a href="#">Услуги</a></li>
 					</ul>
 				</li>
-			</ul>
-		</div> -->
+			</ul> 
+		</div> 
 		<div class="form js-toggle-el js-search">
 			<div class="form__title">Поиск по сайту</div>
 			<div class="form__body">
@@ -59,17 +59,17 @@
 					<button class="form__btn" type="submit">найти</button>
 				</form>
 			</div>
-		</div>
-		<div class="nav js-nav">
+		</div> 
+		<div class="nav js-nav"> 
 			<div class="nav__main js-nav-main">
 				<a href="#" class="balance-link">На счету: <span>234 грн.</span></a>
-				<ul class="nav__list">
-					<li><a href="#">Мой профиль</a>
-					<li><a href="#">Мои купоны</a>
-					<li><a href="#">Пополнение счета</a>
-					<li><a href="#">Бонусная программа</a>
-					<li><a href="#">Пригласить друга</a>
-				</ul>
+				<div class="nav__list">
+					<a href="#">Мой профиль</a>
+					<a href="#">Мои купоны</a>
+					<a href="#">Пополнение счета</a>
+					<a href="#">Бонусная программа</a>
+					<a href="#">Пригласить друга</a>
+				</div>
 				<div class="nav__exit">
 					<a href="#">Выйти</a>
 				</div>
@@ -130,116 +130,181 @@
 		</div>
 	</div>
 	<!-- END header--> 
-	<div class="balance">
-		<div>Ваш номер телефона не активирован</div>
-	</div>
-	<a href="#" class="page-nav">
-		Перейти к списку акций
-	</a>
-	<div class="main">
-		<div class="item item_box to-center">
+	<div class="items-wrap is-hot">
+		<div class="item">
 			<header class="item__head">
-				<div class="item__categ">Приглашайте друзей и получайте бонусы!</div>
+				<div class="item__media">
+					<a href="#"><img src="img/item-logo.png" alt="img"></a>
+					<i class="icon-hot"></i>
+				</div>
+				<div class="item__title">
+					<a href="#">Отдых мечты! 4, 6 или 8 дней для двоих в отеле «Club Visson» от 1399 грн.! Питание, массаж, теннис, кинотеатр и др.!</a>
+				</div>
 			</header>
 			<div class="item__body">
-				Для начисления бонусов активируйте ваш мобильный <br> телефон в бонусной программе
-				<div class="stat">
-					<div class="stat__item">
-						<strong>85</strong>
-						<p>Количество приглашённых друзей</p>
+				<div class="item__img">
+					<a href="#"><img src="img/item.png" alt="img"></a>
+				</div>
+				<div class="address">
+					<i class="icon-metro"></i>
+					Площадь Льва Толстого
+				</div>
+				<div class="counters">
+					<div class="counter">
+						<i class="icon-cart"></i>
+						<div class="counter__main">15</div>
 					</div>
-					<div class="stat__item">
-						<strong>23</strong>
-						<p>Активировали бонусную программу</p>
-					</div>
-					<div class="stat__item">
-						<strong>410</strong> <span>грн</span>
-						<p>Количество приглашённых друзей</p>
+					<div class="counter">
+						<i class="icon-time"></i>
+						<div class="counter__main">22:03:24</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="item item_box item_rules">
-			<div class="item__rules">
-				<div class="item__categ">Вы можете получить по 10 грн. за каждого друга, приглашённого на сайт!</div>
-				<ol>
-					<li>Отправьте своим друзьям уникальную ссылку на наш сайт (см. ниже). </li>
-					<li>За каждую регистрацию друга вы получите по 0 грн., если он активирует свою бонусную программу. </li>
-					<li>За первую покупку друга вы получите 10 грн., если он активирует свою бонусную программу (покупки только за бонусы не засчитываются).</li>
-				</ol>
+			<div class="price-box">
+				<div class="price-box__info">
+					<strong>1 399</strong> грн
+					<span>Цена от</span>
+				</div>
+				<div class="price-box__info">
+					<strong>45%</strong>
+					<span>Скидка</span>
+				</div>
+				<div class="price-box__info">
+					<a href="#" class="btn">Посмотреть</a>
+				</div>
 			</div>
+		</div>
+		<div class="item">
+			<header class="item__head">
+				<div class="item__media">
+					<a href="#"><img src="img/item-logo.png" alt="img"></a>
+					<i class="icon-hot"></i>
+				</div>
+				<div class="item__title">
+					<a href="#">Отдых мечты! 4, 6 или 8 дней для двоих в отеле «Club Visson» от 1399 грн.! Питание, массаж, теннис, кинотеатр и др.!</a>
+				</div>
+			</header>
 			<div class="item__body">
-				<div class="bonus">
-					<div class="bonus__media">
-						<div class="bonus__price">
-							<span>10</span> грн
-							<div>вам на счёт</div>
-						</div>
-					</div>
-					<div class="bonus__info">
-						<a class="bonus__title" href="#">Разместите уникальную ссылку на наш сайт в социальных сетях</a>
-						<p>Отправьте ссылку в социальные сервисы и получите на Ваш счёт 10 грн. за каждого друга.</p>
-					</div>
-					<div class="soc-link">
-						<a href="#"><i class="icon-fb"></i>Разместить</a>
-						<a href="#"><i class="icon-tw"></i>Tweet</a>
-						<a href="#"><i class="icon-vk"></i>Поделиться</a>
-					</div> 
+				<div class="item__img">
+					<a href="#"><img src="img/item.png" alt="img"></a>
 				</div>
-				<div class="bonus">
-					<div class="bonus__media">
-						<div class="bonus__price">
-							<span>10</span> грн
-							<div>вам на счёт</div>
-						</div>
-					</div>
-					<div class="bonus__info">
-						<a class="bonus__title" href="#">Пригласите друзей на наш сайт из Gmail</a>
-						<p>Это самый простой способ пригласить друзей и заработать больше денег.</p>
-					</div> 
-					<div class="soc-link soc-link_width">
-						<a href="#"><i class="icon-gp"></i>Пригласить друзей через Google Gmail</a>
-					</div> 
+				<div class="address">
+					<i class="icon-metro"></i>
+					Площадь Льва Толстого
 				</div>
-				<div class="bonus">
-					<div class="bonus__media">
-						<div class="bonus__price">
-							<span>10</span> грн
-							<div>вам на счёт</div>
-						</div>
+				<div class="counters">
+					<div class="counter">
+						<i class="icon-cart"></i>
+						<div class="counter__main">15</div>
 					</div>
-					<div class="bonus__info">
-						<a class="bonus__title" href="#">Отправьте другу уникальную ссылку</a>
-						<p>Просто скопируйте вашу уникальную ссылку и отправьте её другу</p>
-					</div> 
-					<div class="copy-link">	
-						<button type="button"></button>
-						<input class="copy-link__input" readonly
-						 type="text" value="http://pokupon.ua/kiev?invite=6u8y1nvt3480h0tk1o9">
-					</div>
-				</div>
-				<div class="bonus">
-					<div class="bonus__media">
-						<div class="bonus__price">
-							<span>10</span> грн
-							<div>вам на счёт</div>
-						</div>
-					</div>
-					<div class="bonus__info">
-						<a class="bonus__title" href="#">Отправьте другу приглашение по почте</a>
-						<p>Введите e-mail вашего друга и нажмите кнопку «отправить приглашение»</p>
-					</div> 
-					<div class="invite">
-						<form>
-							<i class="icon-email"></i>
-							<input class="invite__input" type="email" placeholder="E-mail друга">
-							<button class="invite__btn" type="submit">отправить</button>
-						</form>
+					<div class="counter">
+						<i class="icon-time"></i>
+						<div class="counter__main">22:03:24</div>
 					</div>
 				</div>
 			</div>
+			<div class="price-box">
+				<div class="price-box__info">
+					<strong>1 399</strong> грн
+					<span>Цена от</span>
+				</div>
+				<div class="price-box__info">
+					<strong>45%</strong>
+					<span>Скидка</span>
+				</div>
+				<div class="price-box__info">
+					<a href="#" class="btn">Посмотреть</a>
+				</div>
+			</div>
 		</div>
-	</div>
+	</div> 
+	<div class="items-wrap">
+		<div class="item">
+			<header class="item__head">
+				<div class="item__media">
+					<a href="#"><img src="img/item-logo2.png" alt="img"></a>
+				</div>
+				<div class="item__title">
+					<a href="#">Отдых мечты! 4, 6 или 8 дней для двоих в отеле «Club Visson» от 1399 грн.! Питание, массаж, теннис, кинотеатр и др.!</a>
+				</div>
+			</header>
+			<div class="item__body">
+				<div class="item__img">
+					<a href="#"><img src="img/item.png" alt="img"></a>
+				</div>
+				<div class="address">
+					<i class="icon-metro"></i>
+					Площадь Льва Толстого
+				</div>
+				<div class="counters">
+					<div class="counter">
+						<i class="icon-cart"></i>
+						<div class="counter__main">15</div>
+					</div>
+					<div class="counter">
+						<i class="icon-time"></i>
+						<div class="counter__main">22:03:24</div>
+					</div>
+				</div>
+			</div>
+			<div class="price-box">
+				<div class="price-box__info">
+					<strong>1 399</strong> грн
+					<span>Цена от</span>
+				</div>
+				<div class="price-box__info">
+					<strong>45%</strong>
+					<span>Скидка</span>
+				</div>
+				<div class="price-box__info">
+					<a href="#" class="btn">Посмотреть</a>
+				</div>
+			</div>
+		</div>
+		<div class="item">
+			<header class="item__head">
+				<div class="item__media">
+					<a href="#"><img src="img/item-logo2.png" alt="img"></a>
+				</div>
+				<div class="item__title">
+					<a href="#">Отдых мечты! 4, 6 или 8 дней для двоих в отеле «Club Visson» от 1399 грн.! Питание, массаж, теннис, кинотеатр и др.!</a>
+				</div>
+			</header>
+			<div class="item__body">
+				<div class="item__img">
+					<a href="#"><img src="img/item.png" alt="img"></a>
+				</div>
+				<div class="address">
+					<i class="icon-metro"></i>
+					Площадь Льва Толстого
+				</div>
+				<div class="counters">
+					<div class="counter">
+						<i class="icon-cart"></i>
+						<div class="counter__main">15</div>
+					</div>
+					<div class="counter">
+						<i class="icon-time"></i>
+						<div class="counter__main">22:03:24</div>
+					</div>
+				</div>
+			</div>
+			<div class="price-box">
+				<div class="price-box__info">
+					<strong>1 399</strong> грн
+					<span>Цена от</span>
+				</div>
+				<div class="price-box__info">
+					<strong>45%</strong>
+					<span>Скидка</span>
+				</div>
+				<div class="price-box__info">
+					<a href="#" class="btn">Посмотреть</a>
+				</div>
+			</div>
+		</div>
+		<a href="#" class="btn-more">Показать больше</a>
+	</div> 
 	<!-- BEGIN  footer-->
 	<div class="footer">
 		<ul class="footer__nav">
@@ -274,6 +339,6 @@
 	<!-- load scripts -->
 	<script src="js/lib/head.js" data-headjs-load="js/init.js"></script>    
 </div>
-<!-- END out-->  
+<!-- END out--> 
 </body>
-</html>  
+</html>

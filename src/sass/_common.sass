@@ -100,11 +100,8 @@ a
 	overflow: hidden
 	margin: 0 auto 
 	width: 480px
-// .l-center
-// 	margin: 0 auto  
-// 	position: relative
-// 	padding: 0 10px 
-// 	width: 480px
+.l-center
+	padding: 0 30px 
 // common blocks      
 .header
 	position: relative
@@ -382,7 +379,54 @@ a
 		bottom: 0
 		opacity: 0
 		background: rgba(#000,.5) 
-		
+.location-list
+	position: absolute
+	top: 115px
+	z-index: 3
+	left: 0
+	right: 0
+	opacity: 0
+	visibility: hidden
+	padding-bottom: 25px
+	background: $light url(../img/bg-light.png) 0 0 repeat
+	+transform(translateY(-50px))
+	+transition(opacity .3s, transform .3s)
+	will-change: opacity 
+	&.is-active
+		opacity: 1
+		visibility: visible
+		+transform(translateY(0))
+	&:before
+		content: ""
+		position: absolute
+		top: -3px
+		left: 20px
+		+s(location-arr) 
+	&__title
+		margin: 18px 0 15px 
+		text-align: center
+		font-size: 18px
+		+cbold
+		text-transform: uppercase
+	&__in
+		+clr
+	ul
+		float: right
+		width: 48%
+		&:first-child
+			float: left
+		a
+			display: block
+			border-top: 1px solid $gray 
+			font-size: 14px
+			color: $gray_d
+			+reg 
+			padding: 11px 10px 11px 30px
+			&:hover,
+			&.is-active
+				background: #3195ec 
+				color: #fff 
+			
 .footer
 	border-top: 5px solid $blue
 	padding: 20px 10px 160px

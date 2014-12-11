@@ -180,6 +180,8 @@
 	text-align: center
 	.btn
 		min-width: 312px	
+.btn-wrap_mod
+	border: 0
 .btn
 	display: inline-block
 	border: 1px solid #ffdf07
@@ -206,6 +208,11 @@
 	padding: 12px 15px 
 .btn_medium
 	padding: 9px 20px 
+.btn_width
+	min-width: 190px
+.btn-wrap
+	.btn_width
+		min-width: 190px
 .btn_reset
 	background: #cbcbcb 
 	border-color: #ccc 
@@ -602,12 +609,24 @@
 	+placeholder
 		color: #999
 		+reg 
+		font-size: 14px
 	&_small
 		font-size: 14px
 		color: $gray_d 
-		
+	&_mod
+		border-color: $gray
+		box-shadow: none 
+.input_textarea
+	min-height: 140px
+	max-height: 485px
+	resize: vertical
+	padding: 5px 8px 
+	font-size: 14px
+	text-align: left
 .select
 	position: relative
+	+ .field
+		margin-top: 8px
 	&:after
 		content: "" 
 		position: absolute
@@ -769,9 +788,12 @@
 	background: #eef1f2 
 	overflow-y: auto
 	display: none
+	&.has-bg
+		background: $light url(../img/bg-light.png) 0 0 repeat
 	&.is-active
 		display: block
 	&__title
+		position: relative
 		border-top: 5px solid $dark 
 		padding: 15px 50px 22px 30px 
 		background: #3195ec url(../img/bg-blue-dark.png) 0 0 repeat
@@ -779,10 +801,19 @@
 		font-size: 20px
 		line-height: 1.2
 		+bold 
+	&__in
+		padding: 20px 30px 50px
+		border-top: 1px solid #DBDEE0 
 	.btn-hide
-		top: 42px
-		right: 37px
-
+		top: 50%
+		margin-top: -10px
+		right: 25px
+	.page-nav
+		background: none
+		text-shadow: none
+	.btn
+		margin-top: 7px
+		min-width: 190px
 .btn-hide
 	position: absolute
 	+svg(close2,20,20)
@@ -891,3 +922,49 @@
 				left: 0
 				top: 0
 				+sr(enter-ya) 
+
+.checkbox
+	position: relative
+	display: inline-block
+	margin: 5px 0 
+	input
+		position: absolute
+		left: 0
+		top: 0
+		opacity: 0
+		z-index: 2
+		&:checked
+			+ .checkbox__text
+				i
+					&:before
+						+transform(translateY(0))
+						opacity: 1
+	&__text
+		position: relative
+		display: table
+		width: 100%
+		table-layout: fixed
+		font-size: 14px
+		i
+			display: table-cell
+			vertical-align: middle
+			width: 34px
+			height: 34px
+			position: relative
+			background: #fff
+			border: 2px solid $gray
+			border-radius: 5px
+			&:before
+				content: ""
+				position: absolute
+				left: 5px
+				top: 5px
+				+transform(translateY(-5px))
+				will-change: transform
+				opacity: 0
+				+svg(check,20,20) 
+				+transition(opacity .2s, transform .2s)
+		span
+			display: table-cell
+			vertical-align: middle
+			padding: 0 20px
