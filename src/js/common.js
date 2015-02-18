@@ -196,5 +196,8 @@ head.ready(function() {
     $(".js-dropdown-list").on("click", function(event){
         event.stopPropagation();
     });
-   
+    $(".js-show-recovery").on("click", function(){
+        $(".js-recovery").slideToggle(200);
+        return false;
+    });   
 });
