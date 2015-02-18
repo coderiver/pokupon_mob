@@ -227,7 +227,10 @@
 	margin-bottom: 20px
 	background: #fff 
 	+shadow
+.article-wrap
+	padding: 10px 
 .article
+	border-top: 1px solid #dbdee0 
 	color: $gray_d
 	line-height: 1.33
 	+reg
@@ -235,6 +238,19 @@
 	font-size: 15px
 	&__in
 		padding: 5px 30px 25px
+	h2
+		margin: 10px 0 
+		font-size: 24px
+		color: $dark
+		+bold
+		font-weight: normal
+		text-align: center 
+	h3
+		margin: 10px 0 
+		color: $dark
+		+bold
+		font-size: 18px
+		text-align: center
 	p
 		margin-bottom: 24px
 	img
@@ -291,6 +307,9 @@
 					top: 0
 					counter-increment: list2
 					content: counter(list1) "." counter(list2) ". "
+.article_border
+	padding-top: 10px
+	margin-bottom: 20px
 .main
 	padding: 0 10px
 	.item
@@ -732,8 +751,11 @@
 		span
 			color: $dark 
 
-
-
+.main-text
+	font-size: 18px
+	text-align: center
+	+bold
+	margin: 28px 0 
 
 
 
