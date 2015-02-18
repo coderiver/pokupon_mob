@@ -6,6 +6,8 @@ head.ready(function() {
 		$("html").removeClass("has-open-nav");
 		$(".js-toggle-nav").removeClass("is-active");
 		$(".js-nav").removeClass("is-active");
+        $(".js-dropdown-list").slideUp(200);
+        $(".js-dropdown-btn").removeClass("is-active");
 	});
 
     
@@ -184,6 +186,15 @@ head.ready(function() {
     $(".js-message-close").on("click",function (e) {
         $(this).parents(".js-message").fadeOut(200);
         return false;
+    });
+
+    $(".js-dropdown-btn").on("click", function(event){
+        $(this).toggleClass("is-active").parents(".js-dropdown").find(".js-dropdown-list").slideToggle(200);
+        event.stopPropagation();
+        return false;
+    });
+    $(".js-dropdown-list").on("click", function(event){
+        event.stopPropagation();
     });
    
 });

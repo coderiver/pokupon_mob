@@ -968,3 +968,38 @@
 			display: table-cell
 			vertical-align: middle
 			padding: 0 20px
+			
+.dropdown
+	position: relative
+	.btn-action
+		position: relative
+		z-index: 3
+		&.is-active
+			background: $blue_d
+	&__list
+		position: absolute
+		display: none
+		z-index: 2
+		top: 100%
+		left: 10px
+		right: 10px
+		margin-top: -5px
+		padding-top: 5px
+		width: 440px
+		background: #FFF
+		border-radius: 0 0 10px 10px
+		box-shadow: 0 0 5px rgba(0, 0, 0, 0.3)
+		font-size: 18px
+		+cbold
+		text-transform: uppercase
+		li
+			border-top: 1px solid #e2e2e2 
+			&:first-child
+				border-top: 0
+		a
+			display: block
+			padding: 19px 30px
+			+text-overflow 
+			color: $dark
+			&:hover
+				background: #fafafa 

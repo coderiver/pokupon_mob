@@ -12,7 +12,14 @@
 		Перейти к списку акций
 	</a>
 	<div class="coupons-wrap">
-		<a class="btn-action" href="#">Мои Активные неиспользованные купоны</a>
+		<div class="dropdown js-dropdown">
+			<button class="btn-action js-dropdown-btn" type="button">Мои Активные неиспользованные купоны</button>
+			<ul class="dropdown__list js-dropdown-list">
+				<li><a href="#">Мои всякие использованные купоны</a></li>
+				<li><a href="#">Мои разные Активные купоны</a></li>
+				<li><a href="#">Мои Активные неиспользованные купоны</a></li>
+			</ul>
+		</div>
 		@@include('_coupon.html')  
 		@@include('_coupon.html')  
 		@@include('_coupon.html')  
