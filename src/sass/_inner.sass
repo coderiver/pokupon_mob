@@ -236,6 +236,11 @@
 	+reg
 	background: #fff 
 	font-size: 15px
+	&_center
+		text-align: center
+	&_no-padding
+		.article__in
+			padding-bottom: 0
 	&__in
 		padding: 5px 30px 25px
 	h2
@@ -757,12 +762,35 @@
 	+bold
 	margin: 28px 0 
 
-
-
-
-
-
-
+.article
+	+ .review-wrap
+		padding-top: 0
+.review-wrap
+	padding: 10px 
+	&:last-child
+		padding-bottom: 20px
+.review
+	border: 1px solid $gray
+	padding: 20px 
+	border-radius: 10px 
+	line-height: 1.6
+	&__ask
+		margin-bottom: 20px
+		font-size: 16px
+		color: $dark
+		.review__meta
+			margin-top: 10px
+	&__meta
+		text-align: right
+		color: $gray_d
+		font-size: 15px 
+	&__answer
+		border-left: 1px solid #3195ec 
+		padding: 0 24px 10px
+		font-size: 15px
+		color: $gray_d 
+		.review__meta
+			margin-bottom: -8px
 
 
 

@@ -165,6 +165,15 @@ head.ready(function() {
             $('[href="'+hash+'"]').parents(".js-tabs").find("li").removeClass("is-active");
             $('[href="'+hash+'"]').parent().addClass("is-active");
         }
+        else if ($(".js-tabs li.is-active").length) {
+            $(".js-tabs li").each(function(){
+                if ($(this).hasClass("is-active")) {
+                   var hash = $(this).find("a").attr("href");
+                    $('[data-id="'+hash+'"]').show();
+                    window.location.hash = hash;
+                }
+            });
+        }
         else {
             $('.js-tabs li:first').addClass("is-active");
             $('.js-tabs').next().show();
