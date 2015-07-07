@@ -446,7 +446,13 @@
 	height: 5px
 	+g(rgba(#000,.2), rgba(#000,0))
 
-
+.message-sl-wrap
+	.sl 
+		border: 1px solid rgba(#ccc, .3)
+		border-top: #000
+	.message 
+		border: 1px solid rgba(#ccc, .3)
+		border-bottom: #000
 .message
 	position: relative
 	margin: 10px 10px 20px 
@@ -463,6 +469,8 @@
 		font-weight: normal
 		+bold
 		color: $dark
+	&_bd
+		border: 1px solid 
 	.btn-close
 		position: absolute
 		top: 12px

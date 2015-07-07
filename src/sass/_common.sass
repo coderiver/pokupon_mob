@@ -515,7 +515,7 @@ a
 	&:after
 		content: ''
 		position: absolute
-		z-index: -2
+		z-index: 0
 		top: 50%
 		bottom: 0
 		left: 50px
@@ -571,7 +571,7 @@ a
 			content: ''
 			position: absolute
 			display: block
-			top: 8px
+			top: 7px
 			bottom: 0
 			width: 50px
 			z-index: 1 
@@ -623,3 +623,141 @@ a
 		padding: 10px 
 	.btn-yellow
 		+g(#fddd18, #f9b400)
+		
+.title-h2
+	color: #1f384b
+	+cbold
+	font-size: 18px
+	text-align: center
+	text-transform: uppercase
+	margin: 20px 0
+	
+.item-top-wrap
+	margin: 20px 10px 20px 
+	
+.item-top
+	display: table
+	width: 100%
+	margin: 20px 0
+	background: #F8F8F8
+	border: 1px solid #CCC
+	border-radius: 2px
+	table-layout: fixed
+	+clr
+	// .item-top__in,
+	// .item-top__btn,
+	// .item-top__logo
+		// display: table-cell
+		// height: 180px
+	.item-top__body
+		position: relative
+		height: 220px 
+		overflow: hidden
+		padding-right: 20px   
+	.item-top__logo
+		width: 140px
+		height: 220px 
+		background: #FFF
+		border-radius: 2px 0 0 2px 
+		float: left
+		vertical-align: middle
+		text-align: center
+		margin-right: 20px 
+		position: relative
+		img
+			max-width: 96px
+			// vertical-align: middle
+			position: absolute
+			top: 50%
+			left: 50%
+			+translate(-50%,-50%) 
+	.item-top__in
+		padding: 12px 14px
+		vertical-align: top
+	.item-top__btn
+		// width: 200px
+		// padding: 15px 15px 15px 0
+		// text-align: right
+		// vertical-align: middle
+	.item-top__head
+		margin: 20px 0
+		color: #666 
+		font-size: 0
+	.item-top__label,	
+	.item-top__only,	
+	.item-top__time
+		display: inline-block
+		vertical-align: middle	
+	.item-top__label,	
+	.item-top__only
+		margin-right: 35px
+	.item-top__label	
+		padding: 5px 9px
+		border-radius: 5px
+		text-transform: uppercase
+		font-size: 12px
+		+bold
+		&.is-red,
+			color: #a72832
+		&.is-viol,
+		&.is-green
+			padding: 3px 8px
+			color: #fff 
+		&.is-red
+			border: 1px solid #e25f60 
+		&.is-viol
+			border: 1px solid #53447E 
+		&.is-green
+			border: 1px solid #2eafb3 
+	.item-top__time
+		font-size: 12px
+		display: inline-block
+	.item-top__only
+		color: #5C9800 
+	.item-top__title	
+		height: 66px
+		margin-bottom: 17px
+		font-size: 18px
+		color: #1f384b
+		line-height: 1.2
+		overflow: hidden
+	.item-top__exclusive
+		display: inline-block
+		position: absolute
+		+s(exclusive)
+		top: 0
+		left: 0
+
+
+.btn-green
+	width: 200px 
+	padding: 10px 
+	+g(#9ac034, #68a20f)
+	border-radius: 3px 
+	text-align: center
+	+cbold
+	font-size: 16px 
+	color: #fff
+	&:hover
+		+g(#68a20f, #9ac034)
+
+.icon-star
+	display: inline-block
+	+s(star)
+	position: absolute
+	bottom: 15px
+	left: 15px
+
+.bg-light
+	padding: 1px
+	background: #fff url(../img/bg-white.png) 0 0 repeat
+	position: relative
+	&:before
+		content: ''
+		position: absolute
+		height: 50px 
+		bottom: 0
+		left: 0
+		right: 0
+		z-index: -1 
+		+box-shadow(0 0 10px #aaa) 
