@@ -231,4 +231,10 @@ head.ready(function() {
 			})
 		};
 	 }());
+	$('.js-favr').click(function(e) {
+		$(this).toggleClass('is-active');
+		e.preventDefault();
+		e.stopPropagation();
+		return false;
+	});
 });

@@ -51,7 +51,9 @@
 +font(roboto-bold, roboto-bold)  
 +font(roboto-italic, roboto-italic)   
 +font(robotocondensed-bold, robotocondensed-bold)   
-+font(roboto-light, roboto-light)   
++font(roboto-light, roboto-light) 
++font(robotocondensed-regular , robotocondensed-regular ) 
+ 
 =reg
 	font-family: "roboto-regular", Arial, sans-serif 
 =med
@@ -62,8 +64,10 @@
 	font-family: "roboto-italic", Arial, sans-serif 
 =cbold
 	font-family: "robotocondensed-bold", Arial, sans-serif
+=creg
+	font-family: "robotocondensed-regular", Arial, sans-serif 
 =light
-	font-family: "roboto-light", Arial, sans-serif 
+	font-family: "roboto-light", Arial, sans-serif
 =arial
 	font-family: Arial, sans-serif 
 $dark: #333
@@ -531,7 +535,7 @@ a
 		height: 140px 
 	.sl__content
 		position: absolute
-		top: 22px
+		top: 25px
 		// left: 340px 
 		right: 22px
 		color: #FFF
@@ -630,25 +634,21 @@ a
 	font-size: 18px
 	text-align: center
 	text-transform: uppercase
-	margin: 20px 0
+	margin: 20px 0 13px
 	
 .item-top-wrap
-	margin: 20px 10px 20px 
+	margin: 10px 10px 20px 
 	
 .item-top
 	display: table
 	width: 100%
-	margin: 20px 0
+	margin: 13px 0 18px
 	background: #F8F8F8
 	border: 1px solid #CCC
 	border-radius: 2px
 	table-layout: fixed
 	+clr
-	// .item-top__in,
-	// .item-top__btn,
-	// .item-top__logo
-		// display: table-cell
-		// height: 180px
+
 	.item-top__body
 		position: relative
 		height: 220px 
@@ -683,37 +683,33 @@ a
 		margin: 20px 0
 		color: #666 
 		font-size: 0
-	.item-top__label,	
-	.item-top__only,	
+		+clr
+	.item-top__label	
 	.item-top__time
 		display: inline-block
-		vertical-align: middle	
-	.item-top__label,	
-	.item-top__only
-		margin-right: 35px
+		vertical-align: middle
+		float: right	
+		line-height: 27px 
+	.item-top__label
+		// margin-right: 35px
 	.item-top__label	
 		padding: 5px 9px
 		border-radius: 5px
 		text-transform: uppercase
 		font-size: 12px
+		float: left
 		+bold
-		&.is-red,
-			color: #a72832
-		&.is-viol,
-		&.is-green
-			padding: 3px 8px
-			color: #fff 
 		&.is-red
+			color: #a72832
 			border: 1px solid #e25f60 
-		&.is-viol
-			border: 1px solid #53447E 
-		&.is-green
-			border: 1px solid #2eafb3 
+		&.is-purple
+			color: #53447e
+			border: 1px solid #8776b4 
+
 	.item-top__time
 		font-size: 12px
 		display: inline-block
-	.item-top__only
-		color: #5C9800 
+	
 	.item-top__title	
 		height: 66px
 		margin-bottom: 17px
@@ -740,18 +736,26 @@ a
 	color: #fff
 	&:hover
 		+g(#68a20f, #9ac034)
-
-.icon-star
-	display: inline-block
-	+s(star)
+.favr
 	position: absolute
 	bottom: 15px
 	left: 15px
+	i:before
+		content: ''
+		+s(star_y)
+		display: none
+	&.is-active
+		i:before
+			display: inline-block
+.icon-star
+	display: inline-block
+	+s(star)
 
 .bg-light
 	padding: 1px
 	background: #fff url(../img/bg-white.png) 0 0 repeat
 	position: relative
+	margin-bottom: 20px
 	&:before
 		content: ''
 		position: absolute
@@ -761,3 +765,52 @@ a
 		right: 0
 		z-index: -1 
 		+box-shadow(0 0 10px #aaa) 
+		
+.icon-hanger
+	display: inline-block
+	+s(hanger)
+.icon-phones
+	display: inline-block
+	+s(phones)
+.icon-flower
+	display: inline-block
+	+s(flower)
+.icon-paris
+	display: inline-block
+	+s(paris)
+.icon-home
+	display: inline-block
+	+s(home)
+
+.tab-top__list
+	font-size: 0
+	li
+		display: inline-block
+		width: 20%
+		padding: 20px 0
+		text-align: center
+		&.is-active
+			background: #f7f7f7  
+.tab-top-content
+	background: #f7f7f7 
+	padding: 1px 
+.tab-top-content__header
+	margin: 20px 
+	text-align: center
+	+creg
+	font-size: 20px
+	color: #566068 
+.tab-top-inn
+	margin: 0 10px 
+	
+.article-l
+	+light
+	margin-top: 28px 
+	p
+		font-size: 14px
+		line-height: 1.4em
+	h2
+		font-size: 24px
+		font-weight: 100 
+.article-l__in
+	padding: 5px 30px 25px
