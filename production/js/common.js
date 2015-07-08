@@ -237,4 +237,10 @@ head.ready(function() {
 		e.stopPropagation();
 		return false;
 	});
+	$('.js-heart').click(function(e) {
+		$(this).toggleClass('is-active');
+		e.preventDefault();
+		e.stopPropagation();
+		return false;
+	});
 });

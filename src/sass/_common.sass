@@ -881,3 +881,86 @@ a
 		font-weight: 100 
 .article-l__in
 	padding: 5px 30px 25px
+
+.icon-heart
+	display: inline-block
+	+s(heart)
+
+.store
+	border-top: 1px solid #cccccc 
+	border-bottom: #dbdee0 
+	.store__top
+		padding: 15px 0
+		background: #fff
+		height: 120px 
+		font-size: 0
+	.store__logo,
+	.store__text,
+	.store__count,
+	.store__tags
+		display: inline-block
+		vertical-align: top
+	.store__logo
+		text-align: center
+		width: 170px 
+		margin-top: 5px
+		img
+			display: inline-block
+			vertical-align: middle
+	.store__text
+		width: 280px 
+	.store__title
+		+bold
+		font-size: 20px
+		color: #1f384b
+		margin-bottom: 15px 
+	.store__in
+		height: 140px
+		position: relative
+		border-top: 1px solid #dbdee0   
+		border-bottom: 1px solid #dbdee0   
+	.store__count
+		text-align: center
+		width: 170px 
+		height: 139px
+		color: #1f384b
+		display: inline-block
+		border-right: 1px solid #dbdee0 
+		vertical-align: middle
+		p
+			font-size: 11px
+	.store__tags
+		padding: 18px 30px 
+		width: 280px 
+			
+	.amt
+		font-size: 60px 
+		margin: 29px 0 2px
+		line-height: 1
+	.heart
+		color: #666
+		font-size: 12px
+		i
+			vertical-align: middle
+			margin-right: 7px 
+			&:before
+				content: ''
+				display: none
+				+s(heart-a)
+		&.is-active
+			i:before
+				display: inline-block
+
+.tag
+	border-radius: 3px
+	text-align: center
+	background: #fff 
+	color: #333
+	font-size: 11px  
+
+
+
+
+
+	
+		
