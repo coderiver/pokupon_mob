@@ -834,15 +834,6 @@ a
 		.item-top__text
 			margin: 13px 0 20px 
 			
-		
-		
-
-				 
-			
-
-
-
-
 .item-top-wrap__in
 	margin: 0 -5px 
 .item-inline-wrap
@@ -1061,9 +1052,38 @@ a
 	&_big
 		width: 244px
 		margin-top: 6px
-
-			
-			
-		
-		 
-
+.types
+	margin-top: 20px 
+	.types__list
+		font-size: 0
+		margin-right: -5px		
+	.types__item
+		width: 150px 
+		height: 150px
+		background: rgba(#fff,.5) 
+		display: inline-block
+		margin: 0 5px 5px 0
+		border-radius: 5px
+		padding: 23px 15px 0
+		vertical-align: top  
+		@for $i from 1 through 12
+			&:hover
+				.types__ico-#{$i}
+					+sp(cat#{$i}-h)
+			&:active
+				.types__ico-#{$i}
+					+s(cat#{$i})
+	.types__ico
+		height: 50px
+		margin-bottom: 24px 
+		+vertical
+		i
+			display: inline-block
+			vertical-align: middle
+	@for $i from 1 through 12
+		.types__ico-#{$i}
+			+s(cat#{$i})
+	.types__title
+		text-align: center
+		font-size: 16px
+		color: #5b5b5b
