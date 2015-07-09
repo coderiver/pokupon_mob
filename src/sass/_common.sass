@@ -943,6 +943,9 @@ a
 .icon-heart
 	display: inline-block
 	+s(heart)
+.icon-heart2
+	display: inline-block
+	+s(heart2)
 
 .store
 	border-top: 1px solid #cccccc 
@@ -999,18 +1002,22 @@ a
 		margin: 27px 0 2px
 		line-height: 1
 	.heart
-		color: #666
-		font-size: 12px
 		i
-			vertical-align: middle
-			margin-right: 7px 
-			&:before
-				content: ''
-				display: none
-				+s(heart-a)
+			margin-right: 7px
+.heart
+	color: #666
+	font-size: 12px
+	i
+		vertical-align: middle
+	&.is-active
+		i
+			+s(heart-a)
+	&_y
 		&.is-active
-			i:before
-				display: inline-block
+			i
+				+s(heart-a2)
+				position: relative
+				right: -1px 
 
 .tag
 	border-radius: 3px
@@ -1052,20 +1059,24 @@ a
 	&_big
 		width: 244px
 		margin-top: 6px
-.types
+.types,
+.shops
 	margin-top: 20px 
-	.types__list
+	.types__list,
+	.shops__list
 		font-size: 0
 		margin-right: -5px		
-	.types__item
+	.types__item,
+	.shops__item
 		width: 150px 
 		height: 150px
-		background: rgba(#fff,.5) 
+		background: rgba(#fff,.7) 
 		display: inline-block
 		margin: 0 5px 5px 0
 		border-radius: 5px
 		padding: 23px 15px 0
 		vertical-align: top  
+	.types__item
 		@for $i from 1 through 12
 			&:hover
 				.types__ico-#{$i}
@@ -1073,6 +1084,20 @@ a
 			&:active
 				.types__ico-#{$i}
 					+s(cat#{$i})
+	.shops__heart
+		position: absolute
+		right: 9px
+		top: 9px
+	.shops__item
+		padding: 0
+		position: relative
+		.shops__logo
+			display: block
+			position: absolute
+			top: 50%
+			left: 50%
+			+translate(-50%,-50%)
+
 	.types__ico
 		height: 50px
 		margin-bottom: 24px 
