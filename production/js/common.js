@@ -243,4 +243,22 @@ head.ready(function() {
 		e.stopPropagation();
 		return false;
 	});
+	// code sort
+	(function () {
+	    var sort = $('.js-code-sort button'),
+	        code = $('.js-code');
+	    sort.on('click', function () {
+	        var type = $(this).data('code');
+	        sort.removeClass('is-active');
+	        $(this).addClass('is-active');
+	        if (type === undefined) {
+	            code.show();
+	        }
+	        else {
+	            code.hide();
+	            $('.' + type).show();
+	        }
+	        return false;
+	    });
+	}());
 });

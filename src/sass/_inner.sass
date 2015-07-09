@@ -243,6 +243,11 @@
 			padding-bottom: 0
 	&__in
 		padding: 5px 30px 25px
+	&_l
+		+light
+		.article__in
+			padding-top: 25px
+
 	h2
 		margin: 10px 0 
 		font-size: 24px
@@ -258,6 +263,10 @@
 		text-align: center
 	p
 		margin-bottom: 24px
+	&_l
+		p
+			margin-bottom: 15px 
+		
 	img
 		display: block
 		margin: 24px 0 20px 
@@ -312,6 +321,29 @@
 					top: 0
 					counter-increment: list2
 					content: counter(list1) "." counter(list2) ". "
+	&_more
+		position: relative
+		&:after
+			content: ''
+			display: block
+			position: absolute
+			bottom: 0
+			left: 0
+			right: 0
+			z-index: 1
+			height: 90px
+			pointer-events: none 
+			+background-image(linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 37%))
+		.read-more
+			position: absolute
+			display: block
+			left: 30px
+			bottom: 25px
+			z-index: 2
+			font-size: 14px
+			color: #666
+			border-bottom: 1px dotted #7f7f7f
+
 .article_border
 	padding-top: 10px
 	margin-bottom: 20px

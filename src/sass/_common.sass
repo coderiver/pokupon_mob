@@ -702,12 +702,24 @@ a
 			border: 1px solid #e25f60 
 		&.is-purple
 			color: #53447e
-			border: 1px solid #8776b4 
+			border: 1px solid #8776b4
+		&.is-blue
+			color: #2eafb3
+			border: 1px solid #2eafb3
 		&.is-gray
 			color: #666
 			text-transform: capitalize
 			+light
 			font-size: 14px
+	.item-top__only
+		color: #5c9800
+		+bold
+		display: inline-block
+		font-size: 12px
+		line-height: 27px
+		margin-left: 10px 
+		
+			
 
 	.item-top__time
 		font-size: 12px
@@ -780,6 +792,23 @@ a
 		.item-top__body,		
 		.item-top__logo
 			height: 170px 
+	&_brief
+		padding: 0 20px
+		background: #fff 
+		.item-top__time
+			font-size: 12px
+			strong
+				font-size: 14px
+		.item-top__title
+			height: 46px 
+		.item-top__body
+			width: 100%
+			padding-right: 0
+			height: 190px 
+		.item-top__btn
+			text-align: center
+
+
 
 
 .item-top-wrap__in
@@ -924,7 +953,8 @@ a
 		height: 140px
 		position: relative
 		border-top: 1px solid #dbdee0   
-		border-bottom: 1px solid #dbdee0   
+		border-bottom: 1px solid #dbdee0
+		font-size: 0   
 	.store__count
 		text-align: center
 		width: 170px 
@@ -936,12 +966,14 @@ a
 		p
 			font-size: 11px
 	.store__tags
-		padding: 18px 30px 
-		width: 280px 
+		padding: 18px 0px
+		margin-left: 35px  
+		width: 275px
+		font-size: 0
 			
 	.amt
 		font-size: 60px 
-		margin: 29px 0 2px
+		margin: 27px 0 2px
 		line-height: 1
 	.heart
 		color: #666
@@ -963,10 +995,39 @@ a
 	background: #fff 
 	color: #333
 	font-size: 11px  
+	height: 28px
+	width: 120px 
+	line-height: 28px
+	border-radius: 3px 
+	display: inline-block
+	text-transform: uppercase
+	margin: 0 3px 5px 0 
+	&.is-gray
+		border: 1px solid #cccccc
+		&.is-active
+			background: #f0f0f0 
+	&.is-red
+		border: 1px solid #e25f60
+		&.is-active
+			color: #fff
+			background: #e25f60
+	&.is-purple
+		border: 1px solid #8776b4
+		&.is-active
+			color: #fff
+			background: #8776b4
+	&.is-blue
+		border: 1px solid #2eafb3
+		&.is-active
+			color: #fff
+			background: #2eafb3
+	&.is-green
+		border: 1px solid #8bb716
+		&.is-active
+			color: #fff
+			background: #8bb716
+	&_big
+		width: 244px
+		margin-top: 6px
+		 
 
-
-
-
-
-	
-		
