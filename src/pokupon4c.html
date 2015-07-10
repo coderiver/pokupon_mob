@@ -1,0 +1,49 @@
+<!doctype html>
+<html class="no-scroll">
+<head>
+	<title>pokupon4c</title>
+	@@include('_head.html')
+</head>
+<body>
+<!-- BEGIN  out-->
+<div class="out">
+	@@include('_header.html')
+	<div class="items-wrap is-hot">
+		@@include('_item-hot.html')
+		@@include('_item-hot.html')
+	</div> 
+	<div class="items-wrap">
+		@@include('_item.html')
+		@@include('_item.html')
+		<a href="#" class="btn-more">Показать больше</a>
+	</div> 
+	<div class="popup popup_simple js-popup js-popup-bargin is-active">
+		<div class="popup__head">
+			<a href="#" class="logo">
+				<img src="img/logo.png" alt="img">
+			</a>
+		</div>
+		<div class="popup__body">
+			<div class="title-h2 title-h2_popup">Скидка действительна до 15.03.2015 в случае наличия товара в магазине</div>
+			<figure class="figure">
+				<img src="img/picture.jpg" alt="">
+			</figure>
+			<div class="to-center"><a href="#" class="btn-green btn-green_big">Напечатать</a></div>
+		</div>
+		<div class="popup__footer">
+			<a href="#" class="popup__link">Все промокоды на  www. footlocker.com</a>
+			<div class="social">
+				<a href="#"><i class="social-vk"></i></a>
+				<a href="#"><i class="social-fb"></i></a>
+				<a href="#"><i class="social-tw"></i></a>
+				<a href="#"><i class="social-gp"></i></a>
+				<a href="#"><i class="social-mail"></i></a>	
+			</div>
+		</div>
+		<button class="btn-close js-close-popup"></button>
+	</div>
+	@@include('_footer.html')    
+</div>
+<!-- END out--> 
+</body>
+</html> 
