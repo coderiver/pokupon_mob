@@ -652,16 +652,20 @@ a
 	table-layout: fixed
 	+clr
 	.item-top__body
+		display: table-cell
 		position: relative
-		height: 220px 
+		// height: 220px 
+		// width: 316px 
+		width: 100% 
 		overflow: hidden
-		padding-right: 20px   
+		padding: 0 20px 28px 20px     
 	.item-top__logo
 		width: 140px
-		height: 220px 
+		// height: 220px 
+		display: table-cell
 		background: #FFF
 		border-radius: 2px 0 0 2px 
-		float: left
+		// float: left
 		vertical-align: middle
 		text-align: center
 		margin-right: 20px 
@@ -672,7 +676,11 @@ a
 			position: absolute
 			top: 50%
 			left: 50%
-			+translate(-50%,-50%) 
+			+translate(-50%,-50%)
+		.favr
+			position: absolute
+			bottom: 15px
+			left: 15px 
 	.item-top__in
 		padding: 12px 14px
 		vertical-align: top
@@ -759,10 +767,12 @@ a
 			width: 100%
 			height: 130px 
 			margin-right: 0 
+			display: block
 		.item-top__body
 			padding-left: 15px
-			overflow: show
 			height: auto
+			overflow: auto
+			padding-bottom: 0
 		.item-top__time
 			float: none
 			line-height: 1em
@@ -791,17 +801,15 @@ a
 			line-height: 27px
 			bottom: 0
 			right: 0
-			margin-right: 5	px
+			margin-right: 10px
 			i
 				vertical-align: middle
-	&_sm
-		.item-top__body,		
-		.item-top__logo
-			height: 170px 
 	&_brief
+		display: block
 		.item-top__logo
 			width: 100%
-			height: 102px  
+			height: 102px 
+			display: block 
 		.item-top__time
 			font-size: 12px
 		.item-top__head
@@ -809,25 +817,16 @@ a
 		.item-top__title
 			height: 40px 
 		.item-top__body
-			padding: 0 20px
+			padding: 0 20px 28px
 			background: #fff 
 			width: 100%
-			height: 190px 
 		.item-top__btn
 			text-align: center
 		
 		.item-top__logo + .item-top__body
 			background: #F8F8F8
-		
-		&_lg
-			.item-top__body
-				height: 212px 
-			.item-top__title
-				margin-bottom: 15px 
+			
 	&_lg
-		.item-top__logo,
-		.item-top__body
-			height: 260px
 		.item-top__head
 			margin-bottom: 15px
 		.item-top__title
@@ -835,6 +834,15 @@ a
 			margin-bottom: 13px  
 		.item-top__text
 			margin: 13px 0 20px 
+	&_popup
+
+		.item-top__body
+			padding: 20px 40px 5px 20px
+		.favr
+			position: absolute
+			top: 22px
+			right: 16px 
+
 			
 .item-top-wrap__in
 	margin: 0 -5px 
@@ -855,9 +863,7 @@ a
 	&:hover
 		+g(#68a20f, #9ac034)
 .favr
-	position: absolute
-	bottom: 15px
-	left: 15px
+
 	i:before
 		content: ''
 		+s(star_y)

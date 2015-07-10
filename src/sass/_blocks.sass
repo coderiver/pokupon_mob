@@ -885,7 +885,9 @@
 		position: relative
 		padding: 17px 30px 
 		background: #fff
-		+shadow 
+		+shadow
+		&_p
+			padding: 17px 10px  
 	&__footer
 		padding: 17px 20px 20px 
 		background: $light url(../img/bg-light.png) 0 0 repeat
@@ -925,6 +927,18 @@
 		+reg
 		&:hover
 			color: #143b62
+	.popup__code
+		width: 290px
+		height: 45px
+		margin: 45px auto 25px
+		background: #fff
+		border: 1px dashed #e2e2e2
+		line-height: 45px
+		color: #000
+		text-align: center
+		+bold
+		font-size: 32px   
+		  				
 .popup_simple
 	background: $light url(../img/bg-light.png) 0 0 repeat
 	.popup__head
