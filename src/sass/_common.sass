@@ -633,8 +633,10 @@ a
 	+cbold
 	font-size: 18px
 	text-align: center
-	text-transform: uppercase
 	margin: 20px 0 13px
+	&_popup
+		font-size: 20px 
+		+reg
 	
 .item-top-wrap
 	margin: 10px 10px 20px 
@@ -1112,3 +1114,35 @@ a
 		text-align: center
 		font-size: 16px
 		color: #5b5b5b
+.social
+	font-size: 0
+	text-align: center
+	margin-top: 25px
+	a
+		display: inline-block
+		margin-right: 5px 
+		vertical-align: middle
+		i
+			display: inline-block
+			vertical-align: middle
+			
+.social-vk
+	+s(vk)
+	&:hover
+		+sp(vk-h)
+.social-fb
+	+s(fb)
+	&:hover
+		+sp(fb-h)
+.social-tw
+	+s(tw)
+	&:hover
+		+sp(tw-h)
+.social-gp
+	+s(gp)
+	&:hover
+		+sp(gp-h)
+.social-mail
+	+s(mail)
+	&:hover
+		+sp(mail-h)
