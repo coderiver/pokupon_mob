@@ -886,8 +886,6 @@
 		padding: 17px 30px 
 		background: #fff
 		+shadow
-		&_p
-			padding: 17px 10px  
 	&__footer
 		padding: 17px 20px 20px 
 		background: $light url(../img/bg-light.png) 0 0 repeat
@@ -909,6 +907,13 @@
 		padding: 0 20px
 		.popup__title
 			padding-bottom: 8px
+	.popup__btn
+		text-align: center
+		margin-bottom: 40px
+		a
+			width: 292px 
+			display: inline-block
+			
 	.btn-close
 		position: absolute
 		top: 22px
@@ -930,7 +935,7 @@
 	.popup__code
 		width: 290px
 		height: 45px
-		margin: 45px auto 25px
+		margin: 45px auto 32px
 		background: #fff
 		border: 1px dashed #e2e2e2
 		line-height: 45px
@@ -938,6 +943,13 @@
 		text-align: center
 		+bold
 		font-size: 32px   
+	&_pad
+		.popup__body
+			padding:  4px 10px
+			.title-h2
+				margin-top: 3px   
+		.popup__head
+			padding: 0 10px 0 
 		  				
 .popup_simple
 	background: $light url(../img/bg-light.png) 0 0 repeat
