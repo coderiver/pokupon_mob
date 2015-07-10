@@ -177,6 +177,7 @@ head.ready(function() {
 		else {
 			$('.js-tabs li:first').addClass("is-active");
 			$('.js-tabs').next().show();
+			
 		}
 		
 	}
