@@ -910,8 +910,9 @@
 	.popup__btn
 		text-align: center
 		margin-bottom: 40px
-		a
-			width: 292px 
+		.w_292
+			width: 292px
+		a 
 			display: inline-block
 			
 	.btn-close
@@ -923,8 +924,6 @@
 	.popup__text
 		color: #666
 		text-align: center
-		.popup__link
-			display: block
 		
 	.popup__link
 		font-size: 16px
@@ -942,12 +941,18 @@
 		color: #000
 		text-align: center
 		+bold
-		font-size: 32px   
+		font-size: 32px  
+		&_bar
+			border: 0
+			background: transparent
+			height: auto 
+			width: auto 
+			margin: 25px 0 
 	&_pad
 		.popup__body
 			padding:  4px 10px
 			.title-h2
-				margin-top: 3px   
+				margin-top: 12px   
 		.popup__head
 			padding: 0 10px 0 
 		  				

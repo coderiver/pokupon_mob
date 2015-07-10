@@ -323,6 +323,10 @@
 					content: counter(list1) "." counter(list2) ". "
 	&_more
 		position: relative
+		max-height: 300px 
+		overflow: hidden
+		padding-bottom: 15px
+		+tr(max-height .3s)
 		&:after
 			content: ''
 			display: block
@@ -343,6 +347,11 @@
 			font-size: 14px
 			color: #666
 			border-bottom: 1px dotted #7f7f7f
+		&.is-open
+			max-height: 2000px
+			&:after
+				display: none
+				
 
 .article_border
 	padding-top: 10px

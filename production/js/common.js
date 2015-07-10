@@ -210,6 +210,11 @@ head.ready(function() {
 		return false;
 	});   
 	(function () {
+		$('.slider').on('init', function(slick) {
+			  setTimeout(function(){
+			  	$('.slider').addClass("is-ready");
+			  },200);
+		});
 		var slEl = $('.js-sl');
 		if (slEl.length) {
 			var slNav = $('.js-sl-nav');
@@ -261,6 +266,16 @@ head.ready(function() {
 	        return false;
 	    });
 	}());
-
+	(function () {
+		$('.js-open').click(function () {
+			$('.js-open-text').toggleClass('is-open');
+			if($('.js-open-text').hasClass('is-open')) {
+				$('.js-open').text('Свернуть');
+			} else {
+				$('.js-open').text('Читать полностью');
+			}
+			return false;
+		})
+	}());
 
 });
