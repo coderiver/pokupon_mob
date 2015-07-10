@@ -1,0 +1,374 @@
+<!doctype html>
+<html>
+<head>
+	<title>pokupon5-v3</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=480,user-scalable=no">
+	<!-- <meta name="viewport" content="initial-scale=1,user-scalable=no"> -->
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" media="all" href="css/screen.css" >
+</head>
+<body>
+<!-- BEGIN  out-->
+<div class="out">
+	<!-- BEGIN header--> 
+	<div class="header">
+		<div class="header__top">
+			<button class="header__nav js-toggle-nav" type="button"></button>
+			<a class="header__logo" href="#">
+				<img src="img/logo.png" alt="logo">
+			</a>
+			<button class="header__search js-toggle" data-toggle="js-search" type="button"></button>
+		</div>
+		<div class="header__options">
+			<div class="header__links">
+				<div class="location">
+					<a href="#" class="location__link js-toggle" data-toggle="js-toggle-location">Днепропетровск</a>
+				</div>
+				<a href="#" data-popup="js-popup-enter" class="header__user js-open-popup">Вход / Регистрация</a>
+			</div>
+		</div>
+		<div class="header__menu">
+			<ul class="menu"> 
+				<li class="menu__item is-marked">
+					<span class="menu__link menu__link_center"><span>Промокоды</span></span>
+					<ul class="menu__drop">
+						<li><a href="#">Сегодня</a></li>
+						<li><a href="#">Бесплатные купоны</a></li>
+						<li><a href="#">Рестораны</a></li>
+						<li><a href="#">Промокоды</a></li>
+					</ul>
+				</li>
+				<li class="menu__item">
+					<span class="menu__link"><span>Топ скидки</span></span>
+					<ul class="menu__drop">
+						<li><a href="#">Все акции</a></li>
+						<li><a href="#">Обучение</a></li>
+						<li><a href="#">Туризм</a></li>
+						<li><a href="#">Товары</a></li>
+						<li><a href="#">Услуги</a></li>
+					</ul>
+				</li>
+			</ul> 
+		</div> 
+		<div class="form js-toggle-el js-search">
+			<div class="form__title">Поиск по сайту</div>
+			<div class="form__body">
+				<form>
+					<input class="form__input" type="text" placeholder="Поиск">
+					<button class="form__btn" type="submit">найти</button>
+				</form>
+			</div>
+		</div> 
+		<div class="nav js-nav"> 
+			<div class="nav__main js-nav-main">
+				<a href="#" class="balance-link">На счету: <span>234 грн.</span></a>
+				<div class="nav__list">
+					<a href="#">Мой профиль</a>
+					<a href="#">Мои купоны</a>
+					<a href="#">Пополнение счета</a>
+					<a href="#">Бонусная программа</a>
+					<a href="#">Пригласить друга</a>
+				</div>
+				<div class="nav__exit">
+					<a href="#">Выйти</a>
+				</div>
+			</div>
+			<i class="nav__overlay js-nav-overlay"></i>
+		</div>
+		<div class="location-list js-toggle-location">
+			<div class="location-list__title">Украина</div>
+			<div class="location-list__in">
+				<ul>
+					<li><a href="#">Киев</a></li>
+					<li><a href="#">Винница</a></li>
+					<li><a href="#" class="is-active">Днепропетровск</a></li>
+					<li><a href="#">Донецк</a></li>
+					<li><a href="#">Житомир</a></li>
+					<li><a href="#">Запорожье</a></li>
+					<li><a href="#">Ивано-Франковск</a></li>
+					<li><a href="#">Кировоград</a></li>
+					<li><a href="#">Кривой</a></li>
+					<li><a href="#">Рог</a></li>
+					<li><a href="#">Луганск</a></li>
+					<li><a href="#">Луцк</a></li>
+					<li><a href="#">Львов</a></li>
+					<li><a href="#">Мариуполь</a></li>
+					<li><a href="#">Николаев</a></li>
+				</ul>
+				<ul>
+					<li><a href="#">Одесса</a></li>
+					<li><a href="#">Полтава</a></li>
+					<li><a href="#">Ровно</a></li>
+					<li><a href="#">Севастополь</a></li>
+					<li><a href="#">Симферополь</a></li>
+					<li><a href="#">Сумы</a></li>
+					<li><a href="#">Тернополь</a></li>
+					<li><a href="#">Ужгород</a></li>
+					<li><a href="#">Харьков</a></li>
+					<li><a href="#">Херсон</a></li>
+					<li><a href="#">Хмельницкий</a></li>
+					<li><a href="#">Черкассы</a></li>
+					<li><a href="#">Чернигов</a></li>
+					<li><a href="#">Черновцы</a></li>
+				</ul>
+			</div>
+			<div class="location-list__title">Белорусь</div>
+			<div class="location-list__in">
+				<ul>
+					<li><a href="#">Минск</a></li>
+					<li><a href="#">Борисов</a></li>
+					<li><a href="#">Брест</a></li>
+					<li><a href="#">Витебск</a></li>
+				</ul>
+				<ul>
+					<li><a href="#">Гомель</a></li>
+					<li><a href="#">Гродно</a></li>
+					<li><a href="#">Могилев</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- END header--> 
+	<div class="bg-white">
+		<div class="coupons-wrap">
+			<div class="title-h2">Популярные магазины</div>
+			<!-- shops -->
+			<div class="shops shops_white">
+				<div class="shops__list">
+					<div class="shops__item" >
+						<a href="#" class="heart heart_y shops__heart js-heart"><i class="icon-heart2"></i></a>
+						<a href="#" class="shops__logo">
+							<img src="http://placehold.it/125x90" alt="">
+						</a>
+					</div>
+					<div class="shops__item" >
+						<a href="#" class="heart heart_y shops__heart js-heart"><i class="icon-heart2"></i></a>
+						<a href="#" class="shops__logo">
+							<img src="http://placehold.it/125x90" alt="">
+						</a>
+					</div>
+					<div class="shops__item" >
+						<a href="#" class="heart heart_y shops__heart js-heart"><i class="icon-heart2"></i></a>
+						<a href="#" class="shops__logo">
+							<img src="http://placehold.it/125x90" alt="">
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="btn-more-wrap btn-more-wrap_sm">
+			<a href="#" class="btn-more">Посмотреть все магазины</a>
+		</div>
+	</div>
+	<div class="title-h2">Распродажи и скидки по магазинам</div>
+	<div class="btn-more-wrap btn-more-wrap_sm">
+		<a href="#" class="btn-more js-open-popup" data-popup="js-popup-abc">Поиск по названию</a>
+	</div>
+	<div class="wrapper">
+		<ul class="abc abc_digits">
+			<li><a href="#">A</a></li> 
+			<li><a href="#">B</a></li> 
+			<li><a href="#">C</a></li> 
+			<li><a href="#">D</a></li> 
+			<li><a href="#">E</a></li> 
+			<li><a href="#">F</a></li> 
+			<li><a href="#">G</a></li> 
+			<li><a href="#">H</a></li> 
+			<li><a href="#">I</a></li> 
+			<li><a href="#">J</a></li> 
+			<li><a href="#">K</a></li> 
+			<li><a href="#">L</a></li> 
+			<li><a href="#">M</a></li> 
+			<li><a href="#">N</a></li>
+			<li><a href="#">O</a></li> 
+			<li><a href="#">P</a></li> 
+			<li><a href="#">Q</a></li> 
+			<li><a href="#">R</a></li> 
+			<li><a href="#">S</a></li> 
+			<li><a href="#">T</a></li> 
+			<li><a href="#">U</a></li> 
+			<li><a href="#">V</a></li> 
+			<li><a href="#">W</a></li> 
+			<li><a href="#">X</a></li> 
+			<li><a href="#">Y</a></li> 
+			<li><a href="#">Z</a></li> 
+			<li><a href="#">0-9</a></li>
+		</ul>
+		<ul class="abc">
+			<li><a href="#">А</a></li> 
+			<li><a href="#">Б</a></li> 
+			<li><a href="#">В</a></li> 
+			<li><a href="#">Г</a></li> 
+			<li><a href="#">Д</a></li>
+			<li><a href="#">Е</a></li> 
+			<li><a href="#">Ж</a></li> 
+			<li><a href="#">З</a></li> 
+			<li><a href="#">И</a></li> 
+			<li><a href="#">Й</a></li> 
+			<li><a href="#">К</a></li> 
+			<li><a href="#">Л</a></li> 
+			<li><a href="#">М</a></li> 
+			<li><a href="#">Н</a></li>
+			<li><a href="#">О</a></li> 
+			<li><a href="#">П</a></li> 
+			<li><a href="#">Р</a></li> 
+			<li><a href="#">С</a></li> 
+			<li><a href="#">Т</a></li> 
+			<li><a href="#">У</a></li> 
+			<li><a href="#">Ф</a></li>
+			<li><a href="#">Х</a></li> 
+			<li><a href="#">Ц</a></li> 
+			<li><a href="#">Ч</a></li> 
+			<li><a href="#">Ш</a></li> 
+			<li><a href="#">Щ</a></li> 
+			<li><a href="#">Ъ</a></li> 
+			<li><a href="#">Ы</a></li> 
+			<li><a href="#">Ь</a></li> 
+			<li><a href="#">Э</a></li>
+			<li><a href="#">Ю</a></li> 
+			<li><a href="#">Я</a></li> 
+		</ul>
+		<div class="letter">
+			<div class="letter__char">A</div>
+			<ul class="letter__list">
+				<li><a href="#">Ali Express</a></li>
+				<li><a href="#">Astratex</a></li>
+				<li><a href="#">anyBag</a></li>
+				<li><a href="#">Aviasales</a></li>
+				<li><a href="#">Aqua UA</a></li>
+				<li><a href="#">AroMisto</a></li>
+				<li><a href="#">ASOS</a></li>
+			</ul>
+		</div>
+		<div class="letter">
+			<div class="letter__char">B</div>
+			<ul class="letter__list">
+				<li><a href="#">BAG 24</a></li>
+				<li><a href="#">Be Smart</a></li>
+				<li><a href="#">Booking.com</a></li>
+				<li><a href="#">BagMan</a></li>
+				<li><a href="#">Big Travel</a></li>
+				<li><a href="#">Business-Style</a></li>
+				<li><a href="#">Banggood</a></li>
+				<li><a href="#">Body Sculpting Anticellulite</a></li>
+				<li><a href="#">Bust Cream Spa</a></li>
+				<li><a href="#">Beautyshop</a></li>
+				<li><a href="#">Boloto</a></li>
+				<li><a href="#">Butun</a></li>
+				<li><a href="#">BeeLURE</a></li>
+				<li><a href="#">BonPrix</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="popup popup_simple js-popup js-popup-abc is-active">
+		<div class="popup__head">
+			<a href="#" class="logo">
+				<img src="img/logo.png" alt="img">
+			</a>
+		</div>
+		<div class="popup__title">Поиск по названию магазина</div>
+		<div class="wrapper">
+			<ul class="abc abc_digits">
+				<li><a href="#">A</a></li> 
+				<li><a href="#">B</a></li> 
+				<li><a href="#">C</a></li> 
+				<li><a href="#">D</a></li> 
+				<li><a href="#">E</a></li> 
+				<li><a href="#">F</a></li> 
+				<li><a href="#">G</a></li> 
+				<li><a href="#">H</a></li> 
+				<li><a href="#">I</a></li> 
+				<li><a href="#">J</a></li> 
+				<li><a href="#">K</a></li> 
+				<li><a href="#">L</a></li> 
+				<li><a href="#">M</a></li> 
+				<li><a href="#">N</a></li>
+				<li><a href="#">O</a></li> 
+				<li><a href="#">P</a></li> 
+				<li><a href="#">Q</a></li> 
+				<li><a href="#">R</a></li> 
+				<li><a href="#">S</a></li> 
+				<li><a href="#">T</a></li> 
+				<li><a href="#">U</a></li> 
+				<li><a href="#">V</a></li> 
+				<li><a href="#">W</a></li> 
+				<li><a href="#">X</a></li> 
+				<li><a href="#">Y</a></li> 
+				<li><a href="#">Z</a></li> 
+				<li><a href="#">0-9</a></li>
+			</ul>
+			<ul class="abc">
+				<li><a href="#">А</a></li> 
+				<li><a href="#">Б</a></li> 
+				<li><a href="#">В</a></li> 
+				<li><a href="#">Г</a></li> 
+				<li><a href="#">Д</a></li>
+				<li><a href="#">Е</a></li> 
+				<li><a href="#">Ж</a></li> 
+				<li><a href="#">З</a></li> 
+				<li><a href="#">И</a></li> 
+				<li><a href="#">Й</a></li> 
+				<li><a href="#">К</a></li> 
+				<li><a href="#">Л</a></li> 
+				<li><a href="#">М</a></li> 
+				<li><a href="#">Н</a></li>
+				<li><a href="#">О</a></li> 
+				<li><a href="#">П</a></li> 
+				<li><a href="#">Р</a></li> 
+				<li><a href="#">С</a></li> 
+				<li><a href="#">Т</a></li> 
+				<li><a href="#">У</a></li> 
+				<li><a href="#">Ф</a></li>
+				<li><a href="#">Х</a></li> 
+				<li><a href="#">Ц</a></li> 
+				<li><a href="#">Ч</a></li> 
+				<li><a href="#">Ш</a></li> 
+				<li><a href="#">Щ</a></li> 
+				<li><a href="#">Ъ</a></li> 
+				<li><a href="#">Ы</a></li> 
+				<li><a href="#">Ь</a></li> 
+				<li><a href="#">Э</a></li>
+				<li><a href="#">Ю</a></li> 
+				<li><a href="#">Я</a></li> 
+			</ul>
+		</div>
+		<button class="btn-close js-close-popup"></button>
+	</div>
+	<!-- BEGIN  footer-->
+	<div class="footer">
+		<ul class="footer__nav">
+			<li><a href="#">Пресса о нас</a></li>
+			<li><a href="#">Прошедшие акции</a></li>
+			<li><a href="#">ЧаВо</a></li>
+			<li><a href="#">Пользовательское соглашение</a></li>
+			<li><a href="#">Политика конфиденциальности</a></li>
+			<li><a href="#">Партнёрам</a></li>
+		</ul>
+		<a href="#" class="btn-feedback">
+			У вас есть вопросы или предложения?
+			<span>напишите нам</span>
+		</a>
+		<div class="footer__soc">
+			<div>
+				<a href="#"><img src="img/soc-fb.svg" width="9" alt="img"></a>
+				<a href="#"><img src="img/soc-tw.svg" width="21" alt="img"></a>
+				<a href="#"><img src="img/soc-vk.svg" width="12" alt="img"></a>
+			</div>
+		</div>
+		<ul class="footer__contacts">
+			<li><a href="tel:+38044585-80-86">+38 (044) 585-80-86</a></li>
+			<li><a href="mailto:partners@pokupon.ua">partners@pokupon.ua</a></li>
+		</ul>
+		<div class="footer__pay">
+			<img src="img/mc.png" width="155" alt="img">
+			<img src="img/visa.png" alt="img">
+		</div>
+	</div>
+	<!-- END footer--> 
+	<!-- load scripts -->
+	<script src="js/lib/head.js" data-headjs-load="js/init.js"></script>    
+</div>
+<!-- END out-->  
+</body>
+</html>  

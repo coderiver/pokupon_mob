@@ -1,0 +1,57 @@
+.bg-white
+	.coupons-wrap
+		margin: -1px 
+	.shops__item
+		background: #fff 
+
+.abc
+	margin: 20px 0
+	+clr
+	padding-left: 10px
+	&_digits
+		li
+			&:last-child
+				width: 128px
+	li
+		float: left
+		margin: 0 4px 4px 0 
+		width: 62px
+		background: rgba(#fff, .9) 
+		border-radius: 5px 
+		&:hover,
+		&:focus
+			background: #fafafa
+	a
+		display: block
+		height: 60px
+		line-height: 60px
+		text-align: center
+		font-size: 32px
+		+cbold
+		color: #1c548c
+		text-transform: uppercase 
+
+		
+.letter
+	background: #eef1f2 
+	&:last-child
+		margin-bottom: 50px
+	&__char
+		padding: 0 20px 
+		background: #fafbfb 
+		color: #1f384b
+		font-size: 60px
+		+cbold 
+		line-height: 1
+		box-shadow: inset 0 1px 1px rgba(#000, .2)
+	&__list
+		+creg
+		+column-count(2)
+		+column-gap(30px)
+		li
+			border-bottom: 1px solid #e3e5e5 
+		a
+			display: block
+			padding: 10px 30px 
+			color: #1c548c 
+			font-size: 14px
