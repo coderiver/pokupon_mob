@@ -1184,3 +1184,40 @@ a
 	&.is-ready
 		visibility: visible
 		opacity: 1
+
+.letter-nav
+	position: fixed
+	bottom: 10px
+	font-size: 0
+	width: 480px 
+	z-index: 3
+	border-top: 1px solid #80c1eb
+	li
+		display: inline-block
+		width: 16.667%
+		text-align: center
+		position: relative
+		background: url(../img/bg-blue-deep.png) 0 0 repeat
+		&.is-rus
+			background: url(../img/bg-blue-dark.png) 0 0 repeat
+		&:after
+			content: ''
+			position: absolute
+			width: 1px
+			right: 0
+			top: 0
+			bottom: 0
+			border-right: 1px solid #80c1eb
+		&:last-child
+			&:after
+				display: none 
+		
+	a
+		padding: 20px 0
+		display: block
+		+cbold
+		color: #fff
+		font-size: 24px 
+		&:hover
+			background: rgba(#fff,.2) 
+	
