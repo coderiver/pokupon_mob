@@ -515,24 +515,25 @@ a
 
 .sl
 	position: relative
-	margin: -20px 10px 20px
+	margin: 20px 10px 20px
+	background: #fff url(../img/bg-white.png) 0 0 repeat
 	&:after
 		content: ''
 		position: absolute
-		z-index: 0
+		z-index: -1
 		top: 50%
 		bottom: 0
 		left: 50px
 		right: 50px  
 		+box-shadow(0 0 15px rgba(0,0,0,0.3))
 		border-radius: 25%
-
 	.sl__in
 		position: relative
 		z-index: 2 
+	.sl__main
+		position: relative
 	.sl__item
 		position: relative
-		height: 140px 
 		img
 			max-width: 100%
 	.sl__content
@@ -568,7 +569,7 @@ a
 			background: rgba(#ebebeb,.13) 
 	.sl__nav
 		position: relative
-		margin-top: -8px
+		margin-top: -10px
 		border-bottom: 1px solid #e9e3e2
 		z-index: 4
 
@@ -577,7 +578,7 @@ a
 			content: ''
 			position: absolute
 			display: block
-			top: 7px
+			top: 8px
 			bottom: 0
 			width: 50px
 			z-index: 1 
@@ -588,11 +589,14 @@ a
 		&:after
 			right: 0
 			+gh(rgba(0,0,0,0.0),rgba(0,0,0,0.2))
+		&.is-sm
+			.slick-track
+				margin: 0 auto
 	.sl__logo
 		position: relative
-		height: 61px
 		margin-top: 8px
 		padding: 10px
+		height: 61px 
 		background: #F5F5F5
 		box-shadow: 0 1px 0 1px #e5e5e5
 		cursor: pointer
@@ -631,6 +635,87 @@ a
 		padding: 10px 
 	.btn-yellow
 		+g(#fddd18, #f9b400)
+
+// .sl
+// 	position: relative
+// 	margin: 20px 10px 20px
+// 	.sl__in
+// 		position: relative
+// 		z-index: 2 
+// 	.sl__item
+// 		position: relative
+// 		height: 280px 
+// 	.sl__main
+// 		position: relative
+// 	.sl__footer
+// 		font-size: 0
+// 	.sl__link
+// 		display: inline-block
+// 		padding: 5px 10px
+// 		background: rgba(#000,.13)
+// 		border-radius: 2px
+// 		font-size: 15px
+// 		color: #FFF 
+// 		vertical-align: middle
+// 		&:hover
+// 			background: rgba(#ebebeb,.13) 
+// 	.sl__nav
+// 		position: relative
+// 		margin-top: -11px
+// 		border-bottom: 1px solid #e9e3e2
+// 		z-index: 4
+// 		&.is-six
+// 			.slick-track
+// 				margin: 0 auto
+// 	.sl__logo
+// 		position: relative
+// 		margin-top: 8px
+// 		padding: 10px
+// 		background: #F5F5F5
+// 		box-shadow: 0 1px 0 1px #e5e5e5
+// 		cursor: pointer
+// 		+vertical
+// 		z-index: 2 
+// 		img
+// 			max-width: 88px
+// 			max-height: 66px
+// 			vertical-align: middle
+// 			max-width: 100%
+// 			max-height: 100%  
+// 		&.is-active,
+// 		&.slick-center
+// 			background: #FFF 
+// 			border: none
+// 			box-shadow: 0 0 5px rgba(#000,.4)
+// 			cursor: default
+// 			z-index: 4 
+// 			&:after
+// 				content: ""
+// 				position: absolute
+// 				top: -8px
+// 				left: 0
+// 				right: 0
+// 				height: 8px
+// 				background: #FDDE18
+
+// 	.sl__content
+// 		position: absolute
+// 		top: 25px
+// 		// left: 340px 
+// 		right: 22px
+// 		color: #FFF
+// 		text-align: center
+// 	.sl__title
+// 		margin-bottom: 20px
+// 		font-size: 24px
+// 	.sl__text
+// 		margin-top: 20px
+// 		font-size: 16px
+// 		padding: 5px 10px
+// 		display: block
+// 		color: #fff
+// 		+bold
+// 		background: rgba(0,0,0, .3) 
 		
 .title-h2
 	color: #1f384b
@@ -976,9 +1061,8 @@ a
 	border-top: 1px solid #cccccc 
 	border-bottom: #dbdee0 
 	.store__top
-		padding: 15px 0
+		padding: 15px 0 21px
 		background: #fff
-		height: 120px 
 		font-size: 0
 	.store__logo,
 	.store__text,
@@ -1002,6 +1086,7 @@ a
 		font-size: 20px
 		color: #1f384b
 		margin-bottom: 15px 
+		word-wrap: break-word
 	.store__in
 		height: 140px
 		position: relative
@@ -1191,6 +1276,7 @@ a
 	font-size: 0
 	width: 480px 
 	z-index: 3
+	display: none
 	border-top: 1px solid #80c1eb
 	li
 		display: inline-block
