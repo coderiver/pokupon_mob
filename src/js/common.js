@@ -245,6 +245,9 @@ head.ready(function() {
 		  setTimeout(function(){
 		  	$('.slider').addClass("is-ready");
 		  },200);
+		  setTimeout(function(){
+		  	$('.slider').addClass("is-shadow");
+		  },600);
 	});
 
 	var slEl = $('.js-sl');

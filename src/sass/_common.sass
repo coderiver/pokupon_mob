@@ -527,6 +527,8 @@ a
 		height: 10px
 		+box-shadow(0 0 15px rgba(0,0,0,0.3))
 		border-radius: 25%
+		visibility: hidden
+		+tr(visibility .4s)
 	.sl__in
 		position: relative
 		z-index: 2 
@@ -571,7 +573,8 @@ a
 		position: relative
 		margin-top: -10px
 		border-bottom: 1px solid #e9e3e2
-		z-index: 4
+		// z-index: 4
+
 
 		&:before,
 		&:after
@@ -636,7 +639,16 @@ a
 	.btn-yellow
 		+g(#fddd18, #f9b400)
 
-
+.slider
+	visibility: hidden
+	opacity: 0
+	transition: opacity .3s linear
+	&.is-ready
+		visibility: visible
+		opacity: 1
+	&.is-shadow
+		&.sl:after
+			visibility: visible
 		
 .title-h2
 	color: #1f384b
@@ -896,9 +908,10 @@ a
 	display: inline-block
 	+svg(star,19,19)
 
-.bg-wrap
+.bg-white
+	padding: 1px
+	background: #fff url(../img/bg-white.png) 0 0 repeat
 	position: relative
-	padding: 1px 
 	margin-bottom: 30px
 	&:before
 		content: ''
@@ -909,12 +922,6 @@ a
 		right: 0
 		z-index: -1 
 		+box-shadow(0 0 10px #aaa) 
-
-.bg-white
-	padding: 1px
-	background: #fff url(../img/bg-white.png) 0 0 repeat
-	position: relative
-	z-index: 1
 		
 .icon-hanger
 	display: inline-block
@@ -1187,13 +1194,7 @@ a
 	&:hover
 		+sp(mail-h)
 
-.slider
-	visibility: hidden
-	opacity: 0
-	transition: opacity .3s linear
-	&.is-ready
-		visibility: visible
-		opacity: 1
+
 
 .letter-nav
 	position: fixed
